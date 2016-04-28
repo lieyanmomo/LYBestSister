@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recommandTag" rowHeight="136" id="KGk-i7-Jjw" customClass="LYRecommandTagCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="135.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rif-PI-CVa" userLabel="头像">
+                        <rect key="frame" x="20" y="43" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="NMR-ob-1WO"/>
+                            <constraint firstAttribute="height" constant="50" id="f4W-ji-CDI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtO-c4-erf" userLabel="订阅数">
+                        <rect key="frame" x="75" y="75" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibI-kX-CU1">
+                        <rect key="frame" x="249" y="55.5" width="51" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="FollowBtnClickBg"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGD-Ef-UTj" userLabel="名字">
+                        <rect key="frame" x="75" y="43" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ibI-kX-CU1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Mzj-vD-ezh"/>
+                    <constraint firstItem="iGD-Ef-UTj" firstAttribute="top" secondItem="Rif-PI-CVa" secondAttribute="top" id="Qp5-mU-NcA"/>
+                    <constraint firstItem="Rif-PI-CVa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Ugc-vh-sWx"/>
+                    <constraint firstItem="Rif-PI-CVa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="c84-kG-9Gg"/>
+                    <constraint firstItem="CtO-c4-erf" firstAttribute="bottom" secondItem="Rif-PI-CVa" secondAttribute="bottom" id="fcz-UB-pVB"/>
+                    <constraint firstAttribute="trailing" secondItem="ibI-kX-CU1" secondAttribute="trailing" constant="20" id="hic-tK-2W8"/>
+                    <constraint firstItem="CtO-c4-erf" firstAttribute="leading" secondItem="iGD-Ef-UTj" secondAttribute="leading" id="iUI-vq-1Vk"/>
+                    <constraint firstItem="iGD-Ef-UTj" firstAttribute="leading" secondItem="Rif-PI-CVa" secondAttribute="trailing" constant="5" id="lmx-Yg-cKO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageLastView" destination="Rif-PI-CVa" id="G36-Q2-OND"/>
+                <outlet property="subNumberLabel" destination="CtO-c4-erf" id="O5d-Ws-L2x"/>
+                <outlet property="themeNameLabel" destination="iGD-Ef-UTj" id="vxz-Uc-Hn0"/>
+            </connections>
+            <point key="canvasLocation" x="188" y="309"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
+</document>

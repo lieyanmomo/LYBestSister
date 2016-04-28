@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYWebViewController">
+            <connections>
+                <outlet property="backItem" destination="oAv-kI-II2" id="Ald-Zi-e6u"/>
+                <outlet property="forwardItem" destination="NMu-g9-8m3" id="New-u6-u5G"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="nV0-kG-Wvc" id="dxS-r6-vZN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nV0-kG-Wvc">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Le3-6g-2xO">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="rtZ-89-H4r"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem enabled="NO" image="Back" id="oAv-kI-II2">
+                            <connections>
+                                <action selector="back" destination="-1" id="3e6-LP-Pnp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" image="Forward" id="NMu-g9-8m3">
+                            <connections>
+                                <action selector="forward" destination="-1" id="VI6-20-KaB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ID6-bM-ajq"/>
+                        <barButtonItem systemItem="refresh" id="CWb-55-esL"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Le3-6g-2xO" secondAttribute="trailing" id="0Xa-Ot-i7X"/>
+                <constraint firstItem="nV0-kG-Wvc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="C12-Db-LjN"/>
+                <constraint firstAttribute="trailing" secondItem="nV0-kG-Wvc" secondAttribute="trailing" id="Hda-SA-KTO"/>
+                <constraint firstItem="Le3-6g-2xO" firstAttribute="top" secondItem="nV0-kG-Wvc" secondAttribute="bottom" id="cO1-9E-rGD"/>
+                <constraint firstItem="nV0-kG-Wvc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hbh-OC-fau"/>
+                <constraint firstItem="Le3-6g-2xO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="raG-xL-kvD"/>
+                <constraint firstAttribute="bottom" secondItem="Le3-6g-2xO" secondAttribute="bottom" id="t3L-aC-4eW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="32" height="28"/>
+        <image name="Forward" width="32" height="28"/>
+    </resources>
+</document>

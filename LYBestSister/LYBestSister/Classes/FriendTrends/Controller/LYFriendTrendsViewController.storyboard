@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uUI-ra-Mn2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Friend Trends View Controller-->
+        <scene sceneID="yth-ky-56p">
+            <objects>
+                <viewController id="uUI-ra-Mn2" customClass="LYFriendTrendsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4az-tJ-qfd"/>
+                        <viewControllerLayoutGuide type="bottom" id="ohi-br-Pqv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PJ1-qm-5Zg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgu-M8-tzg">
+                                <rect key="frame" x="191.5" y="269.5" width="217.5" height="61"/>
+                                <string key="text">快快登录，关注百思最in牛人
+好友动态让你过把瘾儿~
+欧耶~~~！</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="LGN-3r-HLp">
+                                <rect key="frame" x="276" y="181" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="9RO-B8-ox7"/>
+                                    <constraint firstAttribute="height" constant="48" id="Fw4-as-U8x"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-W6-7Qr">
+                                <rect key="frame" x="200" y="370.5" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="feF-VD-gb9"/>
+                                    <constraint firstAttribute="height" constant="40" id="jD4-1e-JiN"/>
+                                </constraints>
+                                <state key="normal" title="立即登录注册" backgroundImage="friendsTrend_login">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" title="立即登录注册" backgroundImage="friendsTrend_login_click">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1a0-ST-8mW" kind="presentation" id="f4W-lM-BKw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LGN-3r-HLp" firstAttribute="centerX" secondItem="PJ1-qm-5Zg" secondAttribute="centerX" id="GCV-FW-jlD"/>
+                            <constraint firstItem="Sgu-M8-tzg" firstAttribute="centerY" secondItem="PJ1-qm-5Zg" secondAttribute="centerY" id="Hck-cB-Fcq"/>
+                            <constraint firstItem="Sgu-M8-tzg" firstAttribute="top" secondItem="LGN-3r-HLp" secondAttribute="bottom" constant="40" id="Ya1-xf-juN"/>
+                            <constraint firstItem="4c5-W6-7Qr" firstAttribute="centerX" secondItem="PJ1-qm-5Zg" secondAttribute="centerX" id="bHw-kO-puW"/>
+                            <constraint firstItem="4c5-W6-7Qr" firstAttribute="top" secondItem="Sgu-M8-tzg" secondAttribute="bottom" constant="40" id="iD3-gd-F8J"/>
+                            <constraint firstItem="Sgu-M8-tzg" firstAttribute="centerX" secondItem="PJ1-qm-5Zg" secondAttribute="centerX" id="w46-kN-Dm8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UV-px-53i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-284" y="-118"/>
+        </scene>
+        <!--Login Register View Controller-->
+        <scene sceneID="eru-Oe-FIA">
+            <objects>
+                <viewController id="1a0-ST-8mW" customClass="LYLoginRegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vz8-Tj-9F8"/>
+                        <viewControllerLayoutGuide type="bottom" id="WW8-UZ-Tnf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GYt-ZG-uIS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="xov-eM-WTp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WW8-UZ-Tnf" firstAttribute="top" secondItem="xov-eM-WTp" secondAttribute="bottom" id="Cse-lN-BuK"/>
+                            <constraint firstAttribute="trailing" secondItem="xov-eM-WTp" secondAttribute="trailing" id="K37-G4-BOj"/>
+                            <constraint firstItem="xov-eM-WTp" firstAttribute="leading" secondItem="GYt-ZG-uIS" secondAttribute="leading" id="fET-Az-N7P"/>
+                            <constraint firstItem="xov-eM-WTp" firstAttribute="top" secondItem="GYt-ZG-uIS" secondAttribute="top" id="xuJ-n1-TTB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q38-2P-8tB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0R-If-m2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="-118"/>
+        </scene>
+        <!--Friend Trends View Controller-->
+        <scene sceneID="k8f-r4-LMs">
+            <objects>
+                <viewController id="XvE-NT-3Gl" customClass="LYFriendTrendsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3zU-LD-kj9"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Tm-Po-LcW"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="zDs-qr-rJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBe-vn-O4h">
+                                <rect key="frame" x="78" y="303" width="217.5" height="61"/>
+                                <string key="text">快快登录，关注百思最in牛人
+好友动态让你过把瘾儿~
+欧耶~~~！</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tk7-gr-IuP">
+                                <rect key="frame" x="163" y="215" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="36P-HB-z5V"/>
+                                    <constraint firstAttribute="height" constant="48" id="91z-1L-0qC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhO-rJ-n73">
+                                <rect key="frame" x="87" y="404" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="87N-Nx-lzy"/>
+                                    <constraint firstAttribute="height" constant="40" id="l0Y-0e-PS6"/>
+                                </constraints>
+                                <state key="normal" title="立即登录注册" backgroundImage="friendsTrend_login">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" title="立即登录注册" backgroundImage="friendsTrend_login_click">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TBe-vn-O4h" firstAttribute="centerX" secondItem="zDs-qr-rJe" secondAttribute="centerX" id="9pG-yC-HFQ"/>
+                            <constraint firstItem="TBe-vn-O4h" firstAttribute="centerY" secondItem="zDs-qr-rJe" secondAttribute="centerY" id="A6r-87-T0B"/>
+                            <constraint firstItem="tk7-gr-IuP" firstAttribute="centerX" secondItem="zDs-qr-rJe" secondAttribute="centerX" id="AOU-Vp-NL1"/>
+                            <constraint firstItem="DhO-rJ-n73" firstAttribute="centerX" secondItem="zDs-qr-rJe" secondAttribute="centerX" id="fIP-Wm-br5"/>
+                            <constraint firstItem="DhO-rJ-n73" firstAttribute="top" secondItem="TBe-vn-O4h" secondAttribute="bottom" constant="40" id="pmT-C5-bVt"/>
+                            <constraint firstItem="TBe-vn-O4h" firstAttribute="top" secondItem="tk7-gr-IuP" secondAttribute="bottom" constant="40" id="z53-RQ-zZn"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJG-8H-qYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799.5" y="71.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="friendsTrend_login" width="243" height="48"/>
+        <image name="friendsTrend_login_click" width="243" height="48"/>
+        <image name="header_cry_icon" width="48" height="48"/>
+        <image name="login_register_background" width="320" height="568"/>
+    </resources>
+</document>

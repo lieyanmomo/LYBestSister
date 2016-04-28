@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  LYBestSister
+//
+//  Created by lieyanmomo on 16/4/16.
+//  Copyright © 2016年 lieyanmomo. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__ //  #ifdef __OBJC__ 和 #endif中的内容只会出现在OC源文件中
+
+#import "UIBarButtonItem+LYExtension.h"
+#import "LYConst.h" // 全局常量
+#import "UIImage+LYExtension.h" // 设置图片形状
+#import "UIImageView+LYExtension.h"
+#import "UIView+LYExtension.h" // 控件位置尺寸
+#import "NSString+LYExtension.h" // 获取当前路径文件大小
+
+#ifdef DEBUG // 开发调试阶段
+#define LYLog(...) NSLog(__VA_ARGS__)
+#else // 打包发布阶段
+#define LYLog(...)
+#endif
+
+
+/** 颜色处理*/
+#define LYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+#define LYColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0];
+#define LYRandomColor LYColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+#define LYGrayColor(v) LYColor(v, v, v)
+#define LYCommenBackgroundColor LYGrayColor(206)
+
+/** 将网络数据写成plist文件到桌面*/
+#define LYWirteToPlist(objc,fileName) [objc  writeToFile:[NSString stringWithFormat:@"/Users/zhanghaibin/Desktop/%s.plist", #fileName] atomically:YES];
+
+/** 打印当前函数名*/
+#define LYLogFuc LYLog(@"%s", __func__);
+
+#endif
+
+#endif /* PrefixHeader_pch */
