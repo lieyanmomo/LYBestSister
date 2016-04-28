@@ -11,6 +11,7 @@
 		653471511CD240B1005E81D3 /* LYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471501CD240B1005E81D3 /* LYTopic.m */; };
 		653471551CD2437F005E81D3 /* LYTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471531CD2437F005E81D3 /* LYTopicCell.m */; };
 		653471561CD2437F005E81D3 /* LYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653471541CD2437F005E81D3 /* LYTopicCell.xib */; };
+		653471591CD26401005E81D3 /* NSDate+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471581CD26401005E81D3 /* NSDate+LYExtension.m */; };
 		6569BD901CC5F14B00556F49 /* LYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6569BD611CC5F14B00556F49 /* LYEssenceViewController.m */; };
 		6569BD911CC5F14B00556F49 /* LYFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6569BD671CC5F14B00556F49 /* LYFriendTrendsViewController.m */; };
 		6569BD921CC5F14B00556F49 /* LYFriendTrendsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6569BD681CC5F14B00556F49 /* LYFriendTrendsViewController.storyboard */; };
@@ -79,6 +80,8 @@
 		653471521CD2437F005E81D3 /* LYTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopicCell.h; sourceTree = "<group>"; };
 		653471531CD2437F005E81D3 /* LYTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopicCell.m; sourceTree = "<group>"; };
 		653471541CD2437F005E81D3 /* LYTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopicCell.xib; sourceTree = "<group>"; };
+		653471571CD26401005E81D3 /* NSDate+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LYExtension.h"; sourceTree = "<group>"; };
+		653471581CD26401005E81D3 /* NSDate+LYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LYExtension.m"; sourceTree = "<group>"; };
 		6569BD601CC5F14B00556F49 /* LYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEssenceViewController.h; sourceTree = "<group>"; };
 		6569BD611CC5F14B00556F49 /* LYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEssenceViewController.m; sourceTree = "<group>"; };
 		6569BD661CC5F14B00556F49 /* LYFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 				6569E80B1CC780E90008E385 /* UIView+LYExtension.m */,
 				65ECFCF01CC89A4200AD60B3 /* NSString+LYExtension.h */,
 				65ECFCF11CC89A4200AD60B3 /* NSString+LYExtension.m */,
+				653471571CD26401005E81D3 /* NSDate+LYExtension.h */,
+				653471581CD26401005E81D3 /* NSDate+LYExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -727,6 +732,7 @@
 				65ECFD071CCF514800AD60B3 /* LYPictureViewController.m in Sources */,
 				6569E8121CC78DFC0008E385 /* LYFooterView.m in Sources */,
 				65ECFD011CCF511400AD60B3 /* LYVideoViewController.m in Sources */,
+				653471591CD26401005E81D3 /* NSDate+LYExtension.m in Sources */,
 				6569BD971CC5F14B00556F49 /* LYMeViewController.m in Sources */,
 				65ECFD0A1CCF515B00AD60B3 /* LYWordViewController.m in Sources */,
 				653471551CD2437F005E81D3 /* LYTopicCell.m in Sources */,
