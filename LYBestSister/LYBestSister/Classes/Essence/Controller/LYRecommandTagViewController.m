@@ -18,7 +18,7 @@
 /** 所有的标签数据*/
 @property (strong, nonatomic) NSArray *recommandTags;
 /** 请求管理者*/
-@property (strong, nonatomic) AFHTTPSessionManager *manager;
+@property (weak, nonatomic) AFHTTPSessionManager *manager;
 
 @end
 
