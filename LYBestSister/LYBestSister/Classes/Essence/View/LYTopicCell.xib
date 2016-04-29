@@ -41,6 +41,9 @@
                         </constraints>
                         <state key="normal" image="cellmorebtnnormal"/>
                         <state key="highlighted" image="cellmorebtnclick"/>
+                        <connections>
+                            <action selector="moreClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1MQ-rh-eXE"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nq-Av-2Mh" userLabel="内容">
                         <rect key="frame" x="10" y="53" width="306" height="18"/>

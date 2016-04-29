@@ -44,6 +44,8 @@ static NSString * const LYTopicCellId = @"topic";
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     // 行高
     self.tableView.rowHeight = 200;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = LYCommenBackgroundColor;
     
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LYTopicCell class]) bundle:nil] forCellReuseIdentifier:LYTopicCellId];
