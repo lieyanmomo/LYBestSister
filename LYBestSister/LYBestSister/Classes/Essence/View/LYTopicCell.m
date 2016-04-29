@@ -31,6 +31,7 @@
 
 #pragma mark - 重写setFrame方法设置cell间距
 -(void)setFrame:(CGRect)frame {
+    frame.origin.y += LYMargin;
     frame.size.height -= LYMargin;
     [super setFrame:frame];
 }

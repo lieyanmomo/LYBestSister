@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+
+typedef enum {
+    /** 图片*/
+    LYTopicTypePicture = 10,
+    /** 文字*/
+    LYTopicTypeWord = 29,
+    /** 视频*/
+    LYTopicTypeVideo = 41,
+    /** 声音*/
+    LYTopicTypeVoice = 31
+    
+} LYTopicType;
+
 @interface LYTopic : NSObject
 
 /** 头像*/
@@ -26,5 +39,6 @@
 @property (assign, nonatomic) NSInteger repost;
 /** 评论数*/
 @property (assign, nonatomic) NSInteger comment;
-
+/** 帖子类型*/
+@property (assign, nonatomic) LYTopicType type;
 @end
