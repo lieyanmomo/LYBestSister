@@ -8,6 +8,8 @@
 
 #import "LYTopicCell.h"
 #import "LYTopic.h"
+#import "LYComment.h"
+#import "LYUser.h"
 
 @interface LYTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -18,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
 
 @end
 
@@ -51,6 +55,19 @@
     [self setUpButton:self.caiButton number:topic.cai title:@"踩"];
     [self setUpButton:self.repostButton number:topic.repost title:@"转发"];
     [self setUpButton:self.commentButton number:topic.comment title:@"评论"];
+    
+    // 最热评论
+    if (topic.top_cmt) { // 有最热评论
+        self.topCmtView.hidden = NO;
+        // 用户名
+        NSString *username = topic.top_cmt.user.username;
+        // 内容
+        NSString *content = topic.top_cmt.content;
+        
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
 }
 
 /**

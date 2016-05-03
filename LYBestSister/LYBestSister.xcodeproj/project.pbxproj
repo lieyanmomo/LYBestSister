@@ -42,6 +42,8 @@
 		6569E8201CC7DADF0008E385 /* LYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6569E81E1CC7DADF0008E385 /* LYWebViewController.xib */; };
 		65A2C8211CD3B2CA00602C9B /* LYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A2C8201CD3B2CA00602C9B /* LYRefreshHeader.m */; };
 		65A2C8241CD3BF3100602C9B /* LYRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A2C8231CD3BF3100602C9B /* LYRefreshAutoFooter.m */; };
+		65A2CE311CD7B99300ABF16D /* LYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CE301CD7B99300ABF16D /* LYUser.m */; };
+		65A2CE341CD7BB0000ABF16D /* LYComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A2CE331CD7BB0000ABF16D /* LYComment.m */; };
 		65ECFCF21CC89A4200AD60B3 /* NSString+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFCF11CC89A4200AD60B3 /* NSString+LYExtension.m */; };
 		65ECFCF51CC92CA700AD60B3 /* LYClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFCF41CC92CA700AD60B3 /* LYClearCacheCell.m */; };
 		65ECFCF81CC92CD200AD60B3 /* LYSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFCF71CC92CD200AD60B3 /* LYSettingCell.m */; };
@@ -141,6 +143,10 @@
 		65A2C8201CD3B2CA00602C9B /* LYRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRefreshHeader.m; sourceTree = "<group>"; };
 		65A2C8221CD3BF3100602C9B /* LYRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRefreshAutoFooter.h; sourceTree = "<group>"; };
 		65A2C8231CD3BF3100602C9B /* LYRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRefreshAutoFooter.m; sourceTree = "<group>"; };
+		65A2CE2F1CD7B99300ABF16D /* LYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUser.h; sourceTree = "<group>"; };
+		65A2CE301CD7B99300ABF16D /* LYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUser.m; sourceTree = "<group>"; };
+		65A2CE321CD7BB0000ABF16D /* LYComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYComment.h; sourceTree = "<group>"; };
+		65A2CE331CD7BB0000ABF16D /* LYComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYComment.m; sourceTree = "<group>"; };
 		65ECFCF01CC89A4200AD60B3 /* NSString+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LYExtension.h"; sourceTree = "<group>"; };
 		65ECFCF11CC89A4200AD60B3 /* NSString+LYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LYExtension.m"; sourceTree = "<group>"; };
 		65ECFCF31CC92CA700AD60B3 /* LYClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYClearCacheCell.h; sourceTree = "<group>"; };
@@ -247,6 +253,10 @@
 				6569E7F51CC66BCC0008E385 /* LYRecommandTag.m */,
 				6534714F1CD240B1005E81D3 /* LYTopic.h */,
 				653471501CD240B1005E81D3 /* LYTopic.m */,
+				65A2CE2F1CD7B99300ABF16D /* LYUser.h */,
+				65A2CE301CD7B99300ABF16D /* LYUser.m */,
+				65A2CE321CD7BB0000ABF16D /* LYComment.h */,
+				65A2CE331CD7BB0000ABF16D /* LYComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -771,6 +781,8 @@
 				6569E81B1CC7AEFB0008E385 /* LYMeSquareButton.m in Sources */,
 				6569E8181CC7A5B40008E385 /* LYMeSquare.m in Sources */,
 				65ECFCFB1CCF254800AD60B3 /* LYTitleButton.m in Sources */,
+				65A2CE311CD7B99300ABF16D /* LYUser.m in Sources */,
+				65A2CE341CD7BB0000ABF16D /* LYComment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

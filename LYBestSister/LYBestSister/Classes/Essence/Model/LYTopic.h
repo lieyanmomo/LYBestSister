@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class LYComment;
 
 typedef enum {
     /** 图片*/
@@ -41,4 +41,8 @@ typedef enum {
 @property (assign, nonatomic) NSInteger comment;
 /** 帖子类型*/
 @property (assign, nonatomic) LYTopicType type;
+
+/** 最热评论*/
+@property (strong, nonatomic) LYComment *top_cmt;
+
 @end

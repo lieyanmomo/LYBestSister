@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -48,7 +48,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nq-Av-2Mh" userLabel="内容">
                         <rect key="frame" x="10" y="53" width="306" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVo-WT-KjX" userLabel="底部工具条">
@@ -152,20 +152,49 @@
                             <constraint firstItem="EkU-Dm-9eL" firstAttribute="top" secondItem="6yH-FB-o6C" secondAttribute="bottom" id="yvc-Vy-l1H"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqn-kF-13A" userLabel="最热评论">
+                        <rect key="frame" x="10" y="78" width="306" height="35.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-AJ-kdt" userLabel="最热评论-标题">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58N-lr-6bS" userLabel="最热评论-内容">
+                                <rect key="frame" x="0.0" y="18" width="306" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="58N-lr-6bS" secondAttribute="bottom" id="0qY-YI-LZ7"/>
+                            <constraint firstItem="7Dc-AJ-kdt" firstAttribute="top" secondItem="zqn-kF-13A" secondAttribute="top" id="6QL-O7-noG"/>
+                            <constraint firstItem="7Dc-AJ-kdt" firstAttribute="leading" secondItem="zqn-kF-13A" secondAttribute="leading" id="J3z-0G-jOk"/>
+                            <constraint firstAttribute="trailing" secondItem="58N-lr-6bS" secondAttribute="trailing" id="OAX-KO-lBc"/>
+                            <constraint firstItem="58N-lr-6bS" firstAttribute="leading" secondItem="zqn-kF-13A" secondAttribute="leading" id="f2D-9c-OAL"/>
+                            <constraint firstItem="58N-lr-6bS" firstAttribute="top" secondItem="7Dc-AJ-kdt" secondAttribute="bottom" id="l8F-1I-J9P"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="IVo-WT-KjX" firstAttribute="top" secondItem="zqn-kF-13A" secondAttribute="bottom" constant="10" id="2O7-Q9-gTf"/>
                     <constraint firstItem="0nq-Av-2Mh" firstAttribute="leading" secondItem="Zv3-Rv-62h" secondAttribute="leading" id="7JD-IC-uwI"/>
                     <constraint firstItem="IVo-WT-KjX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7Sj-Eo-bgR"/>
                     <constraint firstAttribute="trailing" secondItem="zdk-0X-DiM" secondAttribute="trailing" constant="10" id="FzY-ds-8jk"/>
                     <constraint firstItem="Zv3-Rv-62h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="G0A-sz-O6g"/>
                     <constraint firstItem="vvo-ct-EMa" firstAttribute="leading" secondItem="7M9-cF-hje" secondAttribute="leading" id="JKo-Xs-Gac"/>
                     <constraint firstItem="0nq-Av-2Mh" firstAttribute="top" secondItem="Zv3-Rv-62h" secondAttribute="bottom" constant="8" id="LPC-nW-P0l"/>
+                    <constraint firstAttribute="trailing" secondItem="zqn-kF-13A" secondAttribute="trailing" constant="10" id="OWQ-ZH-8vV"/>
                     <constraint firstItem="vvo-ct-EMa" firstAttribute="bottom" secondItem="Zv3-Rv-62h" secondAttribute="bottom" id="Szt-f0-v0f"/>
                     <constraint firstItem="0nq-Av-2Mh" firstAttribute="trailing" secondItem="zdk-0X-DiM" secondAttribute="trailing" id="ch8-Df-BJw"/>
                     <constraint firstItem="Zv3-Rv-62h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dDB-6S-mrE"/>
                     <constraint firstAttribute="trailing" secondItem="IVo-WT-KjX" secondAttribute="trailing" id="iq9-co-XHr"/>
                     <constraint firstAttribute="bottom" secondItem="IVo-WT-KjX" secondAttribute="bottom" id="kTe-gh-KwT"/>
                     <constraint firstItem="7M9-cF-hje" firstAttribute="top" secondItem="Zv3-Rv-62h" secondAttribute="top" id="lKe-1j-4yr"/>
+                    <constraint firstItem="zqn-kF-13A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lc9-sc-Ltl"/>
                     <constraint firstItem="zdk-0X-DiM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oz4-em-H7r"/>
                     <constraint firstItem="7M9-cF-hje" firstAttribute="leading" secondItem="Zv3-Rv-62h" secondAttribute="trailing" constant="10" id="uTb-El-ABK"/>
                 </constraints>
@@ -179,6 +208,8 @@
                 <outlet property="profileImageView" destination="Zv3-Rv-62h" id="oLa-sd-aIp"/>
                 <outlet property="repostButton" destination="l8j-dy-FwR" id="DQu-bE-Mc4"/>
                 <outlet property="text_label" destination="0nq-Av-2Mh" id="Pgb-tp-uo9"/>
+                <outlet property="topCmtContentLabel" destination="58N-lr-6bS" id="t7u-tz-OjD"/>
+                <outlet property="topCmtView" destination="zqn-kF-13A" id="dol-Tk-90U"/>
             </connections>
             <point key="canvasLocation" x="583" y="195.5"/>
         </tableViewCell>

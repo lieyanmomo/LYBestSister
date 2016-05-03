@@ -7,9 +7,20 @@
 //
 
 #import "LYTopic.h"
+#import <MJExtension.h>
 
 @implementation LYTopic
 
+#pragma mark - MJExtension
+/** 声明模型属性名 对应的字典key*/
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{
+             @"top_cmt" : @"top_cmt[0]"
+             };
+}
+
+
+#pragma mark - 重写get方法
 - (NSString *)created_at {
     // 服务器返回的日期
     NSDateFormatter *fomt = [[NSDateFormatter alloc] init];
