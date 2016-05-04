@@ -11,10 +11,25 @@
             <rect key="frame" x="0.0" y="0.0" width="340" height="186"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="PQA-vA-Iup" userLabel="占位图片">
+                    <rect key="frame" x="97" y="10" width="145" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="X5M-PM-qfu"/>
+                        <constraint firstAttribute="width" constant="145" id="qMx-iD-K8b"/>
+                    </constraints>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Egd-rU-2bW" userLabel="图片">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="186"/>
-                    <color key="backgroundColor" red="0.99919462203979492" green="0.47903025834298063" blue="0.47296429239321075" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0u-cV-jxw" userLabel="进度" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="120" y="43" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="NeF-at-1Hl"/>
+                        <constraint firstAttribute="height" constant="100" id="YqP-Hi-1MG"/>
+                    </constraints>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="oqB-CN-NbG" userLabel="动态图标">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                     <constraints>
@@ -40,8 +55,12 @@
                 <constraint firstItem="Egd-rU-2bW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bo4-yI-Pb2"/>
                 <constraint firstAttribute="bottom" secondItem="Egd-rU-2bW" secondAttribute="bottom" id="DM4-04-Fkc"/>
                 <constraint firstItem="m05-K2-9Za" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HY5-v9-eQB"/>
+                <constraint firstItem="PQA-vA-Iup" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="J8F-5q-HzC"/>
                 <constraint firstItem="oqB-CN-NbG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QSR-aT-YfP"/>
                 <constraint firstItem="oqB-CN-NbG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bax-bD-XHE"/>
+                <constraint firstItem="PQA-vA-Iup" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="chG-zk-UbQ"/>
+                <constraint firstItem="l0u-cV-jxw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uDW-se-MQQ"/>
+                <constraint firstItem="l0u-cV-jxw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="w4Y-HP-15l"/>
                 <constraint firstAttribute="trailing" secondItem="m05-K2-9Za" secondAttribute="trailing" id="ytL-qw-Nlr"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -49,6 +68,8 @@
             <connections>
                 <outlet property="gifView" destination="oqB-CN-NbG" id="ORr-yS-GAq"/>
                 <outlet property="imageView" destination="Egd-rU-2bW" id="jCq-aA-ffu"/>
+                <outlet property="placeholderView" destination="PQA-vA-Iup" id="Zw8-Ev-odM"/>
+                <outlet property="progressView" destination="l0u-cV-jxw" id="2hW-ro-Oyf"/>
                 <outlet property="seeBigPicture" destination="m05-K2-9Za" id="Tg6-eg-HEA"/>
             </connections>
             <point key="canvasLocation" x="303" y="509"/>
@@ -56,6 +77,7 @@
     </objects>
     <resources>
         <image name="common-gif" width="31" height="31"/>
+        <image name="post_placeholderImage" width="145" height="30"/>
         <image name="see-big-picture" width="19" height="19"/>
         <image name="see-big-picture-background" width="285" height="43"/>
     </resources>

@@ -9,13 +9,16 @@
 #import "LYTopicPictureView.h"
 #import "LYTopic.h"
 #import <UIImageView+WebCache.h>
+#import <DALabeledCircularProgressView.h>
 
 @interface LYTopicPictureView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPicture;
+@property (weak, nonatomic) IBOutlet UIImageView *placeholderView;
 
+@property (weak, nonatomic) IBOutlet DALabeledCircularProgressView *progressView;
 
 @end
 
@@ -29,6 +32,10 @@
 - (void)awakeFromNib {
     // 去除系统自带的图片拉伸
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    // 设置进度样式
+    self.progressView.roundedCorners = 5;
+    self.progressView.progressLabel.textColor = [UIColor whiteColor];
 }
 
 /** 重写set方法 */
@@ -36,7 +43,21 @@
     _topic = topic;
     
     // 显示图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        // 显示正在下载提醒
+        self.progressView.hidden = NO;
+        self.placeholderView.hidden = NO;
+        
+        // 下载进度计算
+        CGFloat progress = 1.0 * receivedSize / expectedSize;
+        self.progressView.progress = progress;
+        self.progressView.progressLabel.text = [NSString stringWithFormat:@"%.0f%%", progress * 100];
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        // 隐藏占位图片和下载进度
+        self.progressView.hidden = YES;
+        self.placeholderView.hidden = YES;
+    }];
     
     // 是否为gif
     self.gifView.hidden = !topic.is_gif;
