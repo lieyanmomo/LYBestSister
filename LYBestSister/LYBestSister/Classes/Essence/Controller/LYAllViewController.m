@@ -60,6 +60,7 @@ static NSString * const LYTopicCellId = @"topic";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = LYCommenBackgroundColor;
     
+        
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LYTopicCell class]) bundle:nil] forCellReuseIdentifier:LYTopicCellId];
 }
@@ -153,6 +154,7 @@ static NSString * const LYTopicCellId = @"topic";
     
     cell.topic = self.topics[indexPath.row];
     
+    
     return cell;
 }
 
@@ -160,5 +162,7 @@ static NSString * const LYTopicCellId = @"topic";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.topics[indexPath.row].cellHeight;
 }
+
+
 
 @end

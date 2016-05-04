@@ -17,6 +17,8 @@
         self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
         self.textLabel.textColor = [UIColor darkGrayColor];
     }
+    // 禁止选中变灰
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return self;
 }

@@ -47,6 +47,8 @@
 - (void)awakeFromNib {
     // 设置cell背景图片
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+    // 设置cell选中状态不变灰
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 #pragma mark - 重写setFrame方法设置cell间距
