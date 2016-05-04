@@ -10,6 +10,7 @@
 #import "LYTopic.h"
 #import "LYComment.h"
 #import "LYUser.h"
+#import "LYTopicPictureView.h"
 
 @interface LYTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -20,12 +21,27 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+/** 中间控件整体 */
 @property (weak, nonatomic) IBOutlet UIView *topCmtView;
 @property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+
+/** 中间控件 */
+@property (nonatomic, weak) LYTopicPictureView *pictureView;
+
 
 @end
 
 @implementation LYTopicCell
+#pragma mark - 懒加载
+- (LYTopicPictureView *)pictureView {
+    if (!_pictureView) {
+        LYTopicPictureView *pictureView = [LYTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
 
 #pragma mark - 初始化
 - (void)awakeFromNib {
@@ -67,6 +83,21 @@
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", username, content];
     } else {
         self.topCmtView.hidden = YES;
+    }
+    
+    // 中间控件【具体内容】
+    if (topic.type == LYTopicTypePicture) { // 图片
+        self.pictureView.hidden = NO;
+        self.pictureView.frame = topic.centerViewFrame; // 位置
+        self.pictureView.topic = topic; // 数据
+    } else if(topic.type == LYTopicTypeVideo){ // 视频
+        self.pictureView.hidden = YES;
+        
+    } else if(topic.type == LYTopicTypeVoice){ // 声音
+        self.pictureView.hidden = YES;
+        
+    } else{ // 文字
+        self.pictureView.hidden = YES;
     }
 }
 

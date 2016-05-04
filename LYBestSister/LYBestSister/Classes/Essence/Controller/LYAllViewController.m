@@ -20,7 +20,7 @@
 /** 请求管理者*/
 @property (weak, nonatomic) LYHTTPSessionManager *manager;
 /** 帖子数据*/
-@property (strong, nonatomic) NSMutableArray *topics;
+@property (strong, nonatomic) NSMutableArray<LYTopic *> *topics;
 /** 用来加载下一页数据的参数*/
 @property (copy, nonatomic) NSString *maxtime;
 @end
@@ -57,7 +57,7 @@ static NSString * const LYTopicCellId = @"topic";
     // 滚动条内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     // 行高
-    self.tableView.rowHeight = 200;
+    self.tableView.rowHeight = 400;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = LYCommenBackgroundColor;
     
@@ -156,4 +156,10 @@ static NSString * const LYTopicCellId = @"topic";
     
     return cell;
 }
+
+#pragma mark - 代理
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.topics[indexPath.row].cellHeight;
+}
+
 @end
