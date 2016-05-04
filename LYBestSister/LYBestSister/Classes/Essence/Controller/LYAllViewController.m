@@ -57,7 +57,6 @@ static NSString * const LYTopicCellId = @"topic";
     // 滚动条内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     // 行高
-    self.tableView.rowHeight = 400;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = LYCommenBackgroundColor;
     
