@@ -10,6 +10,7 @@
 #import "LYTopic.h"
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
+#import "LYSeeBigViewController.h"
 
 @interface LYTopicPictureView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -33,11 +34,29 @@
     // 去除系统自带的图片拉伸
     self.autoresizingMask = UIViewAutoresizingNone;
     
+#warning 是按钮不能点击-触控返回上级
+    self.seeBigPicture.userInteractionEnabled = NO;
+    
     // 设置进度样式
     self.progressView.roundedCorners = 5;
     self.progressView.progressLabel.textColor = [UIColor whiteColor];
+    
+    // 监听图片点击【添加收拾】
+    self.imageView.userInteractionEnabled = YES; // 是图片可以点击【默认imageView不可以点击】
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick)]];
 }
 
+#pragma mark -- 图片点击方法
+- (void)imageClick {
+    if (self.imageView.image == nil) return;
+    
+    LYSeeBigViewController *seeBig = [[LYSeeBigViewController alloc] init];
+    seeBig.topic = self.topic;
+    [self.window.rootViewController presentViewController:seeBig animated:YES completion:nil
+     ];
+}
+
+#pragma mark - set方法赋值
 /** 重写set方法 */
 - (void)setTopic:(LYTopic *)topic {
     _topic = topic;

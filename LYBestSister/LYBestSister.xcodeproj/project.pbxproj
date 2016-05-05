@@ -47,6 +47,8 @@
 		65EBA7AE1CD9F497001469F7 /* LYTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EBA7AD1CD9F497001469F7 /* LYTopicPictureView.m */; };
 		65EBA7B01CD9F4BF001469F7 /* LYTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65EBA7AF1CD9F4BF001469F7 /* LYTopicPictureView.xib */; };
 		65EBA7B31CDA03CA001469F7 /* LYExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EBA7B21CDA03CA001469F7 /* LYExtensionConfig.m */; };
+		65EBA7B71CDACF22001469F7 /* LYSeeBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EBA7B51CDACF22001469F7 /* LYSeeBigViewController.m */; };
+		65EBA7B81CDACF22001469F7 /* LYSeeBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65EBA7B61CDACF22001469F7 /* LYSeeBigViewController.xib */; };
 		65ECFCF21CC89A4200AD60B3 /* NSString+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFCF11CC89A4200AD60B3 /* NSString+LYExtension.m */; };
 		65ECFCF51CC92CA700AD60B3 /* LYClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFCF41CC92CA700AD60B3 /* LYClearCacheCell.m */; };
 		65ECFCF81CC92CD200AD60B3 /* LYSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFCF71CC92CD200AD60B3 /* LYSettingCell.m */; };
@@ -155,6 +157,9 @@
 		65EBA7AF1CD9F4BF001469F7 /* LYTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopicPictureView.xib; sourceTree = "<group>"; };
 		65EBA7B11CDA03CA001469F7 /* LYExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYExtensionConfig.h; sourceTree = "<group>"; };
 		65EBA7B21CDA03CA001469F7 /* LYExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYExtensionConfig.m; sourceTree = "<group>"; };
+		65EBA7B41CDACF22001469F7 /* LYSeeBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSeeBigViewController.h; sourceTree = "<group>"; };
+		65EBA7B51CDACF22001469F7 /* LYSeeBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSeeBigViewController.m; sourceTree = "<group>"; };
+		65EBA7B61CDACF22001469F7 /* LYSeeBigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYSeeBigViewController.xib; sourceTree = "<group>"; };
 		65ECFCF01CC89A4200AD60B3 /* NSString+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LYExtension.h"; sourceTree = "<group>"; };
 		65ECFCF11CC89A4200AD60B3 /* NSString+LYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LYExtension.m"; sourceTree = "<group>"; };
 		65ECFCF31CC92CA700AD60B3 /* LYClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYClearCacheCell.h; sourceTree = "<group>"; };
@@ -250,6 +255,9 @@
 				6569BD611CC5F14B00556F49 /* LYEssenceViewController.m */,
 				6569BDE91CC6334F00556F49 /* LYRecommandTagViewController.h */,
 				6569BDEA1CC6334F00556F49 /* LYRecommandTagViewController.m */,
+				65EBA7B41CDACF22001469F7 /* LYSeeBigViewController.h */,
+				65EBA7B51CDACF22001469F7 /* LYSeeBigViewController.m */,
+				65EBA7B61CDACF22001469F7 /* LYSeeBigViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -691,6 +699,7 @@
 				653471561CD2437F005E81D3 /* LYTopicCell.xib in Resources */,
 				6569BD921CC5F14B00556F49 /* LYFriendTrendsViewController.storyboard in Resources */,
 				6569E7FB1CC66E030008E385 /* LYRecommandTagCell.xib in Resources */,
+				65EBA7B81CDACF22001469F7 /* LYSeeBigViewController.xib in Resources */,
 				65FC61351CB917060007D32D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,6 +807,7 @@
 				6569E80F1CC7883B0008E385 /* LYMeCell.m in Sources */,
 				6569BD9B1CC5F14B00556F49 /* LYNewViewController.m in Sources */,
 				6569BD901CC5F14B00556F49 /* LYEssenceViewController.m in Sources */,
+				65EBA7B71CDACF22001469F7 /* LYSeeBigViewController.m in Sources */,
 				6569BD911CC5F14B00556F49 /* LYFriendTrendsViewController.m in Sources */,
 				6569BDE81CC61C0000556F49 /* LYLoginRegisterViewController.m in Sources */,
 				65A2C8211CD3B2CA00602C9B /* LYRefreshHeader.m in Sources */,
