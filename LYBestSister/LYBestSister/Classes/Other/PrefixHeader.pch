@@ -21,8 +21,10 @@
 
 #ifdef DEBUG // 开发调试阶段
 #define LYLog(...) NSLog(__VA_ARGS__)
+
 #else // 打包发布阶段
 #define LYLog(...)
+
 #endif
 
 
