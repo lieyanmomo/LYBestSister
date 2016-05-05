@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5AE4C3CE7EC9F893E19AF3BA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C064D26F2E3DA5967CD919 /* libPods.a */; };
+		651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */; };
+		651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */; };
 		653471511CD240B1005E81D3 /* LYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471501CD240B1005E81D3 /* LYTopic.m */; };
 		653471551CD2437F005E81D3 /* LYTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471531CD2437F005E81D3 /* LYTopicCell.m */; };
 		653471561CD2437F005E81D3 /* LYTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653471541CD2437F005E81D3 /* LYTopicCell.xib */; };
@@ -84,6 +86,9 @@
 		0C321F1B88EE053F3F97B695 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		15D93DFFC29BB2B4B469BC95 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		23C064D26F2E3DA5967CD919 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopVoiceView.h; sourceTree = "<group>"; };
+		651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopVoiceView.m; sourceTree = "<group>"; };
+		651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopVoiceView.xib; sourceTree = "<group>"; };
 		6534714F1CD240B1005E81D3 /* LYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopic.h; sourceTree = "<group>"; };
 		653471501CD240B1005E81D3 /* LYTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopic.m; sourceTree = "<group>"; };
 		653471521CD2437F005E81D3 /* LYTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopicCell.h; sourceTree = "<group>"; };
@@ -497,6 +502,9 @@
 				65EBA7AC1CD9F497001469F7 /* LYTopicPictureView.h */,
 				65EBA7AD1CD9F497001469F7 /* LYTopicPictureView.m */,
 				65EBA7AF1CD9F4BF001469F7 /* LYTopicPictureView.xib */,
+				651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */,
+				651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */,
+				651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -698,6 +706,7 @@
 				6569E8201CC7DADF0008E385 /* LYWebViewController.xib in Resources */,
 				653471561CD2437F005E81D3 /* LYTopicCell.xib in Resources */,
 				6569BD921CC5F14B00556F49 /* LYFriendTrendsViewController.storyboard in Resources */,
+				651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */,
 				6569E7FB1CC66E030008E385 /* LYRecommandTagCell.xib in Resources */,
 				65EBA7B81CDACF22001469F7 /* LYSeeBigViewController.xib in Resources */,
 				65FC61351CB917060007D32D /* Assets.xcassets in Resources */,
@@ -777,6 +786,7 @@
 				6569E8031CC7289A0008E385 /* LYConst.m in Sources */,
 				6569BD9E1CC5F14B00556F49 /* main.m in Sources */,
 				6569BD9C1CC5F14B00556F49 /* AppDelegate.m in Sources */,
+				651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */,
 				6569E7FA1CC66E030008E385 /* LYRecommandTagCell.m in Sources */,
 				6569E80C1CC780E90008E385 /* UIView+LYExtension.m in Sources */,
 				6569E8151CC79E9F0008E385 /* LYHTTPSessionManager.m in Sources */,

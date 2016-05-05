@@ -62,7 +62,10 @@
     _topic = topic;
     
     // 显示图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) { // 这个block可能被调用多次
+        // 【receivedSize】-- 下载完的大小 【expectedSize】-- 总共大小
+        if (receivedSize < 0 || expectedSize < 0) return;
+        
         // 显示正在下载提醒
         self.progressView.hidden = NO;
         self.placeholderView.hidden = NO;

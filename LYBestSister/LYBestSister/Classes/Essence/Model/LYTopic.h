@@ -57,6 +57,12 @@ typedef enum {
 @property (nonatomic, copy) NSString *large_image;
 /** 是否为动态图 */
 @property (nonatomic, assign) BOOL is_gif;
+/** 播放数量 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 音频长度 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 视频长度 */
+@property (nonatomic, assign) NSInteger videotime;
 
 #pragma mark - 辅助属性
 /** 中间控件的frame */
