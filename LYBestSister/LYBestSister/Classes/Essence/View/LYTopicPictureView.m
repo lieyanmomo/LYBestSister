@@ -10,10 +10,9 @@
 #import "LYTopic.h"
 #import <UIImageView+WebCache.h>
 #import <DALabeledCircularProgressView.h>
-#import "LYSeeBigViewController.h"
+
 
 @interface LYTopicPictureView ()
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifView;
 
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPicture;
@@ -24,45 +23,21 @@
 @end
 
 @implementation LYTopicPictureView
-/** 加载中间图片方法 */
-+ (instancetype)pictureView {
-    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
-}
 
 #pragma mark - 初始化
 - (void)awakeFromNib {
-    // 去除系统自带的图片拉伸
-    self.autoresizingMask = UIViewAutoresizingNone;
+    [super awakeFromNib];
     
-#warning 是按钮不能点击-触控返回上级
     self.seeBigPicture.userInteractionEnabled = NO;
-    
-    // 设置进度样式
-    self.progressView.roundedCorners = 5;
-    self.progressView.progressLabel.textColor = [UIColor whiteColor];
-    
-    // 监听图片点击【添加收拾】
-    self.imageView.userInteractionEnabled = YES; // 是图片可以点击【默认imageView不可以点击】
-    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick)]];
-}
-
-#pragma mark -- 图片点击方法
-- (void)imageClick {
-    if (self.imageView.image == nil) return;
-    
-    LYSeeBigViewController *seeBig = [[LYSeeBigViewController alloc] init];
-    seeBig.topic = self.topic;
-    [self.window.rootViewController presentViewController:seeBig animated:YES completion:nil
-     ];
 }
 
 #pragma mark - set方法赋值
 /** 重写set方法 */
 - (void)setTopic:(LYTopic *)topic {
-    _topic = topic;
+    [super setTopic:topic];
     
     // 显示图片
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) { // 这个block可能被调用多次
+    [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) { // 这个block可能被调用多次
         // 【receivedSize】-- 下载完的大小 【expectedSize】-- 总共大小
         if (receivedSize < 0 || expectedSize < 0) return;
         
@@ -87,11 +62,11 @@
     // 查看大图
     self.seeBigPicture.hidden = !topic.isBigPicture;
     if (topic.isBigPicture) { // 大图
-        self.imageView.contentMode = UIViewContentModeTop;
-        self.imageView.clipsToBounds = YES;
+        _imageView.contentMode = UIViewContentModeTop;
+        _imageView.clipsToBounds = YES;
     } else {
-        self.imageView.contentMode = UIViewContentModeScaleToFill;
-        self.imageView.clipsToBounds = NO;
+        _imageView.contentMode = UIViewContentModeScaleToFill;
+        _imageView.clipsToBounds = NO;
     }
 }
 

@@ -6,17 +6,12 @@
 //  Copyright © 2016年 lieyanmomo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@class LYTopic;
+#import "LYTopicCenterView.h"
 
 
-@interface LYTopVideoView : UIView
+@interface LYTopVideoView : LYTopicCenterView
 
-/** 创建方法 */
-+ (instancetype)videoView;
 
-/** 模型数据 */
-@property (nonatomic, strong) LYTopic *topic;
 
 
 @end

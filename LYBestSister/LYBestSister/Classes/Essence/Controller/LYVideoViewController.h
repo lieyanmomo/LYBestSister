@@ -6,8 +6,8 @@
 //  Copyright © 2016年 lieyanmomo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LYBaseViewController.h"
 
-@interface LYVideoViewController : UITableViewController
+@interface LYVideoViewController : LYBaseViewController
 
 @end

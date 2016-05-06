@@ -127,7 +127,6 @@
 - (void)setUpScrollView {
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.frame = self.view.bounds;
-    scrollView.backgroundColor = LYRandomColor;
     // 设置scrollView的代理
     scrollView.delegate = self;
     scrollView.pagingEnabled = YES;

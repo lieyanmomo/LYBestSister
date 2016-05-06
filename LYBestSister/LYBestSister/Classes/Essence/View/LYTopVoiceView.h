@@ -6,14 +6,10 @@
 //  Copyright © 2016年 lieyanmomo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-@class LYTopic;
+#import "LYTopicCenterView.h"
 
-@interface LYTopVoiceView : UIView
+@interface LYTopVoiceView : LYTopicCenterView
 
-+ (instancetype)voiceView;
 
-/** 模型数据 */
-@property (nonatomic, strong) LYTopic *topic;
 
 @end

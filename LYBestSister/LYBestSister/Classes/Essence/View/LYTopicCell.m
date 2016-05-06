@@ -41,7 +41,7 @@
 #pragma mark - 懒加载
 - (LYTopicPictureView *)pictureView {
     if (!_pictureView) {
-        LYTopicPictureView *pictureView = [LYTopicPictureView pictureView];
+        LYTopicPictureView *pictureView = [LYTopicPictureView centerView];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
@@ -51,7 +51,7 @@
 - (LYTopVoiceView *)voiceView
 {
     if (!_voiceView) {
-        LYTopVoiceView *voiceView = [LYTopVoiceView voiceView];
+        LYTopVoiceView *voiceView = [LYTopVoiceView centerView];
         [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
     }
@@ -60,7 +60,7 @@
 
 - (LYTopVideoView *)videoView {
     if (!_videoView) {
-        LYTopVideoView *videoView = [LYTopVideoView videoView];
+        LYTopVideoView *videoView = [LYTopVideoView centerView];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }

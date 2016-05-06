@@ -10,6 +10,9 @@
 @class LYComment;
 
 typedef enum {
+    
+    /** 全部 */
+    LYTopicTypeAll = 1,
     /** 图片*/
     LYTopicTypePicture = 10,
     /** 文字*/
