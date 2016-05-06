@@ -12,6 +12,7 @@
 #import "LYUser.h"
 #import "LYTopicPictureView.h"
 #import "LYTopVoiceView.h"
+#import "LYTopVideoView.h"
 
 @interface LYTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -27,9 +28,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
 
 /** 中间控件 */
+/** 图片 */
 @property (nonatomic, weak) LYTopicPictureView *pictureView;
 /** 声音 */
 @property (nonatomic, weak) LYTopVoiceView *voiceView;
+/** 视频 */
+@property (nonatomic, weak) LYTopVideoView *videoView;
 
 @end
 
@@ -52,6 +56,15 @@
         _voiceView = voiceView;
     }
     return _voiceView;
+}
+
+- (LYTopVideoView *)videoView {
+    if (!_videoView) {
+        LYTopVideoView *videoView = [LYTopVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 
@@ -102,6 +115,7 @@
     // 中间控件【具体内容】
     if (topic.type == LYTopicTypePicture) { // 图片
         self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
         
         
         self.pictureView.hidden = NO;
@@ -111,8 +125,13 @@
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
         
+        self.videoView.hidden = NO;
+        self.videoView.frame = topic.centerViewFrame;
+        self.videoView.topic = topic;
+        
     } else if(topic.type == LYTopicTypeVoice){ // 声音
         self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
         
         self.voiceView.hidden = NO;
         self.voiceView.frame = topic.centerViewFrame;
@@ -121,6 +140,7 @@
     } else{ // 文字
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
 }
 
