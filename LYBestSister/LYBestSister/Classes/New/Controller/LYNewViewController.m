@@ -13,7 +13,7 @@
 @end
 
 @implementation LYNewViewController
-
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -31,5 +31,5 @@
 {
     LYLogFuc
 }
-
+*/
 @end

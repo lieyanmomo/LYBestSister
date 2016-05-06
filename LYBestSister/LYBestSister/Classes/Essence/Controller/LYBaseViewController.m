@@ -15,6 +15,9 @@
 #import "LYRefreshHeader.h"
 #import "LYRefreshAutoFooter.h"
 
+#import "LYEssenceViewController.h"
+#import "LYNewViewController.h"
+
 @interface LYBaseViewController ()
 
 /** 请求管理者*/
@@ -84,10 +87,20 @@ static NSString * const LYTopicCellId = @"topic";
     
 }
 #pragma mark -- 上拉刷新数据处理
+
+/** 参数a */
+- (NSString *)paramA {
+    if ([self.parentViewController isKindOfClass:[LYNewViewController class]]) {
+        return @"newlist";
+    }
+    
+    return @"list";
+}
+
 - (void)loadMoreTopics {
     // 请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.paramA;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     params[@"maxtime"] = self.maxtime;
@@ -121,7 +134,7 @@ static NSString * const LYTopicCellId = @"topic";
 - (void)loadNewTopics {
     // 请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.paramA;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     

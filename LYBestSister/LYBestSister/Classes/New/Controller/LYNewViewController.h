@@ -6,8 +6,8 @@
 //  Copyright © 2016年 lieyanmomo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LYEssenceViewController.h"
 
-@interface LYNewViewController : UIViewController
+@interface LYNewViewController : LYEssenceViewController
 
 @end
