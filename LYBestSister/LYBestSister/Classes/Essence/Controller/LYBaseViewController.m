@@ -17,6 +17,7 @@
 
 #import "LYEssenceViewController.h"
 #import "LYNewViewController.h"
+#import "LYCommentViewController.h"
 
 @interface LYBaseViewController ()
 
@@ -181,6 +182,13 @@ static NSString * const LYTopicCellId = @"topic";
 #pragma mark - 代理
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.topics[indexPath.row].cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LYCommentViewController *comment = [[LYCommentViewController alloc] init];
+    [self.navigationController pushViewController:comment animated:YES];
+    
 }
 
 
