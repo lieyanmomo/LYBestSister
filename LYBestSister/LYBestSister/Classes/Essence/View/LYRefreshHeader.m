@@ -15,7 +15,7 @@
     [super prepare];
     
     // 将刷新中添加开关
-    [self addSubview:[[UISwitch alloc] init]];
+//    [self addSubview:[[UISwitch alloc] init]];
     
     self.lastUpdatedTimeLabel.hidden = YES;
     // 更改刷新显示文字

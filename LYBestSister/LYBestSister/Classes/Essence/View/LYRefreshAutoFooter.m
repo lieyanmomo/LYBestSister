@@ -14,7 +14,7 @@
     [super prepare];
     
     // 添加开关
-    [self addSubview:[[UISwitch alloc] init]];
+//    [self addSubview:[[UISwitch alloc] init]];
     
     // 设置底部显示高度再刷新
     self.triggerAutomaticallyRefreshPercent = 3;

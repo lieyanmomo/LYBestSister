@@ -29,7 +29,7 @@
 
 - (void)friendsRecommentClick
 {
-    LYLogFuc
+    [self performSegueWithIdentifier:@"FriendTrendsToRecommendFollow" sender:nil];
 }
 
 @end

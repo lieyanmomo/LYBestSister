@@ -56,7 +56,9 @@
 - (void)setupChildVcs
 {
     
-    
+    // 关注
+    LYFriendTrendsViewController *friendTrends = [UIStoryboard storyboardWithName:NSStringFromClass([LYFriendTrendsViewController class]) bundle:nil].instantiateInitialViewController;
+    [self setupOneChildVc:[[LYNavigationController alloc] initWithRootViewController:friendTrends] title:@"关注" normalImage:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
     // 精华
     [self setupOneChildVc:[[LYNavigationController alloc] initWithRootViewController:[[LYEssenceViewController alloc] init]] title:@"精华" normalImage:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
@@ -64,9 +66,7 @@
     // 新帖
     [self setupOneChildVc:[[LYNavigationController alloc] initWithRootViewController:[[LYNewViewController alloc] init]] title:@"新帖" normalImage:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    // 关注
-    LYFriendTrendsViewController *friendTrends = [UIStoryboard storyboardWithName:NSStringFromClass([LYFriendTrendsViewController class]) bundle:nil].instantiateInitialViewController;
-    [self setupOneChildVc:[[LYNavigationController alloc] initWithRootViewController:friendTrends] title:@"关注" normalImage:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    
     
     // 我
     [self setupOneChildVc:[[LYNavigationController alloc] initWithRootViewController:[[LYMeViewController alloc] initWithStyle:UITableViewStyleGrouped]] title:@"我" normalImage:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
