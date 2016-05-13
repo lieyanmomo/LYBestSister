@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LYTabBarController.h"
+#import "LYStatusBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,9 @@
     self.window.rootViewController = [[LYTabBarController alloc] init];
     // 3.显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 4.显示【盖住状态栏的控制器】
+    [LYStatusBarViewController show];
     return YES;
 }
 
