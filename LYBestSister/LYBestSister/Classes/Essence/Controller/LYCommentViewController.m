@@ -14,6 +14,8 @@
 #import <MJExtension.h>
 #import "LYRefreshHeader.h"
 #import "LYRefreshAutoFooter.h"
+#import "LYCommentHeaderView.h"
+#import "LYTopicCell.h"
 
 @interface LYCommentViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -28,11 +30,15 @@
 /** 最新评论数据 */
 @property (nonatomic, strong) NSMutableArray<LYComment *> *lastestComments;
 
+/** 最热评论 */
+@property (nonatomic, strong) id top_cmt;
+
 @end
 
 @implementation LYCommentViewController
 
 static NSString * const LYCommentCellId = @"comment";
+static NSString * const LYHeaderId = @"header";
 
 #pragma mark - 懒加载
 - (LYHTTPSessionManager *)manager {
@@ -53,7 +59,8 @@ static NSString * const LYCommentCellId = @"comment";
     // 设置tableView
     [self setupTableView];
     
-    [self loadNewComments];
+    // 设置tableViewHeader
+    [self setupTableViewHeader];
 }
 
 /** 基本设置 */
@@ -66,6 +73,9 @@ static NSString * const LYCommentCellId = @"comment";
 /** 设置tableView */
 - (void)setupTableView {
     
+    self.tableView.backgroundColor = LYCommenBackgroundColor;
+    self.tableView.sectionHeaderHeight = [UIFont systemFontOfSize:16].lineHeight;
+    
     self.tableView.contentInset = UIEdgeInsetsMake(LYNavigationBarBottom, 0, 0, 0);
     
     // 自动计算cell高度
@@ -75,6 +85,8 @@ static NSString * const LYCommentCellId = @"comment";
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LYCommentCell class]) bundle:nil] forCellReuseIdentifier:LYCommentCellId];
     
+    [self.tableView registerClass:[LYCommentHeaderView class] forHeaderFooterViewReuseIdentifier:LYHeaderId];
+    
     // 刷新
     self.tableView.mj_header = [LYRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.tableView.mj_header beginRefreshing];
@@ -83,9 +95,45 @@ static NSString * const LYCommentCellId = @"comment";
     
 }
 
+/** 设置tableViewHeader */
+- (void)setupTableViewHeader {
+    
+    // 处理模型数据
+    if (self.topic.top_cmt) {
+        self.top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        self.topic.cellHeight = 0;
+    }
+    
+    // 头部控件
+    UIView *headerView = [[UIView alloc] init];
+    
+    // 将cell添加到headerView中
+    LYTopicCell *cell = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([LYTopicCell class]) owner:nil options:nil].lastObject;
+    cell.topic = self.topic;
+    
+    // cell 的 frame
+    cell.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.topic.cellHeight);
+    
+    [headerView addSubview:cell];
+    
+    headerView.height = cell.height + 2 * LYMargin;
+    
+    // 设置header
+    self.tableView.tableHeaderView = headerView;
+    
+}
+
 - (void)dealloc {
     // 移除通知
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 处理模型数据
+    if (self.top_cmt) {
+        self.topic.top_cmt = self.top_cmt;
+        
+        self.topic.cellHeight = 0;
+    }
 }
 
 #pragma mark - 监听键盘通实现方法
@@ -239,11 +287,18 @@ static NSString * const LYCommentCellId = @"comment";
     [self.view endEditing:YES];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    // 创建header
+    LYCommentHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:LYHeaderId];
     
-    if (self.hottestComments.count && section == 0) return @"最热评论";
-    return @"最新评论";
+    if (self.hottestComments.count && section == 0) {
+        headerView.text = @"最热评论";
+    } else {
+        headerView.text = @"最新评论";
+    }
     
+    return headerView;
 }
 
 @end

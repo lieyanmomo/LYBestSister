@@ -20,7 +20,6 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Egd-rU-2bW" userLabel="图片">
                     <rect key="frame" x="0.0" y="0.0" width="340" height="186"/>
-                    <color key="backgroundColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0u-cV-jxw" userLabel="进度" customClass="DALabeledCircularProgressView">
                     <rect key="frame" x="120" y="43" width="100" height="100"/>

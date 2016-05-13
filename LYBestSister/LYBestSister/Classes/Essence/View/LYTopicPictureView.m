@@ -29,6 +29,9 @@
     [super awakeFromNib];
     
     self.seeBigPicture.userInteractionEnabled = NO;
+    
+    self.progressView.roundedCorners = 5;
+    self.progressView.progressLabel.textColor = [UIColor whiteColor];
 }
 
 #pragma mark - set方法赋值
