@@ -115,6 +115,7 @@
 		651EC10D1CE5BDF30036477B /* LYCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCommentHeaderView.m; sourceTree = "<group>"; };
 		651EC10F1CE603B40036477B /* LYStatusBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusBarViewController.h; sourceTree = "<group>"; };
 		651EC1101CE603B40036477B /* LYStatusBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusBarViewController.m; sourceTree = "<group>"; };
+		651EC1121CE61E540036477B /* LYSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSingleton.h; sourceTree = "<group>"; };
 		651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopVoiceView.h; sourceTree = "<group>"; };
 		651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopVoiceView.m; sourceTree = "<group>"; };
 		651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopVoiceView.xib; sourceTree = "<group>"; };
@@ -528,6 +529,7 @@
 				6569E8141CC79E9F0008E385 /* LYHTTPSessionManager.m */,
 				65EBA7B11CDA03CA001469F7 /* LYExtensionConfig.h */,
 				65EBA7B21CDA03CA001469F7 /* LYExtensionConfig.m */,
+				651EC1121CE61E540036477B /* LYSingleton.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";

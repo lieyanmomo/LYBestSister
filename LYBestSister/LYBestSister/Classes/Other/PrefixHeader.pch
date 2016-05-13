@@ -18,6 +18,7 @@
 #import "UIView+LYExtension.h" // 控件位置尺寸
 #import "NSString+LYExtension.h" // 获取当前路径文件大小
 #import "NSDate+LYExtension.h" // 时间比较
+#import "LYStatusBarViewController.h" // 状态栏
 
 #ifdef DEBUG // 开发调试阶段
 #define LYLog(...) NSLog(__VA_ARGS__)

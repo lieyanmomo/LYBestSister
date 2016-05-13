@@ -19,9 +19,23 @@
     // Do any additional setup after loading the view.
 }
 
-#pragma mark - 设置状态栏样式
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [LYStatusBarViewController shareLYStatusBarViewController].statusBarStyle = UIStatusBarStyleLightContent;
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [LYStatusBarViewController shareLYStatusBarViewController].statusBarStyle = UIStatusBarStyleDefault;
+}
+
+#pragma mark - 设置状态栏样式
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    return UIStatusBarStyleLightContent;
+//}
 
 @end

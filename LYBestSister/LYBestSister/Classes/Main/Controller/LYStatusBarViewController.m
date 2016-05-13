@@ -7,12 +7,16 @@
 //
 
 #import "LYStatusBarViewController.h"
+#import "LYSingleton.h"
 
 @interface LYStatusBarViewController ()
 
 @end
 
 @implementation LYStatusBarViewController
+
+#pragma mark - 单利
+implementationSingleton(LYStatusBarViewController)
 
 #pragma mark - window的相关处理
 static UIWindow *window_;
@@ -36,9 +40,28 @@ static UIWindow *window_;
 
 #pragma mark - 控制状态栏
 - (BOOL)prefersStatusBarHidden {
-    return NO;
+    return self.statusBarHidden;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return self.statusBarStyle;
+}
+
+#pragma mark - setter
+- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
+    _statusBarStyle = statusBarStyle;
+    
+    // 刷新状态栏 (内部会重新调用prefersStatusBarHidden和preferredStatusBarStyle方法)
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void)setStatusBarHidden:(BOOL)statusBarHidden
+{
+    _statusBarHidden = statusBarHidden;
+    
+    // 刷新状态栏 (内部会重新调用prefersStatusBarHidden和preferredStatusBarStyle方法)
+    [self setNeedsStatusBarAppearanceUpdate];
+}
 
 #pragma mark - 初始化
 - (void)viewDidLoad {

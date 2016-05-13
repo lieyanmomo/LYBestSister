@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LYSingleton.h"
+
 
 @interface LYStatusBarViewController : UIViewController
 
 + (void)show;
+
+interfaceSingleton(LYStatusBarViewController);
+
+/** 状态的显示和隐藏 */
+@property (nonatomic, assign, getter=isStatusBarHidden) BOOL statusBarHidden;
+/** 状态栏的样式 */
+@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
+
 
 @end
