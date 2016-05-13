@@ -27,6 +27,7 @@
     // 防止自动拉伸
     self.autoresizingMask = UIViewAutoresizingNone;
     
+    
     // 监听图片点击【添加收拾】
     self.imageView.userInteractionEnabled = YES; // 是图片可以点击【默认imageView不可以点击】
     // 添加【点击手势】

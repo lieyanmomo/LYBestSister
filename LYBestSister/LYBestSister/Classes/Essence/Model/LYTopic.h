@@ -26,6 +26,11 @@ typedef enum {
 
 @interface LYTopic : NSObject
 
+/** id */
+@property (nonatomic, copy) NSString *id;
+/** mid */
+@property (nonatomic, copy) NSString *tag;
+
 /** 头像*/
 @property (copy, nonatomic) NSString *profile_image;
 /** 昵称*/

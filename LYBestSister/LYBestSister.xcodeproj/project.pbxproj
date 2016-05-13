@@ -12,6 +12,8 @@
 		65102F8D1CE07E0C00826297 /* LYRecommendCatorgayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65102F8C1CE07E0C00826297 /* LYRecommendCatorgayCell.m */; };
 		65102F901CE0819B00826297 /* LYRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65102F8F1CE0819B00826297 /* LYRecommendCategory.m */; };
 		65102F931CE0DC8B00826297 /* LYRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65102F921CE0DC8B00826297 /* LYRecommendUserCell.m */; };
+		65152BCC1CE5836D0098F91B /* LYCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65152BCA1CE5836D0098F91B /* LYCommentCell.m */; };
+		65152BCD1CE5836D0098F91B /* LYCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65152BCB1CE5836D0098F91B /* LYCommentCell.xib */; };
 		651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */; };
 		651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */; };
 		653471511CD240B1005E81D3 /* LYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471501CD240B1005E81D3 /* LYTopic.m */; };
@@ -104,6 +106,9 @@
 		65102F8F1CE0819B00826297 /* LYRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LYRecommendCategory.m; path = LYBestSister/Classes/FriendTrends/Controller/LYRecommendCategory.m; sourceTree = SOURCE_ROOT; };
 		65102F911CE0DC8B00826297 /* LYRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LYRecommendUserCell.h; path = LYBestSister/Classes/FriendTrends/Controller/LYRecommendUserCell.h; sourceTree = SOURCE_ROOT; };
 		65102F921CE0DC8B00826297 /* LYRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LYRecommendUserCell.m; path = LYBestSister/Classes/FriendTrends/Controller/LYRecommendUserCell.m; sourceTree = SOURCE_ROOT; };
+		65152BC91CE5836D0098F91B /* LYCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCommentCell.h; sourceTree = "<group>"; };
+		65152BCA1CE5836D0098F91B /* LYCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCommentCell.m; sourceTree = "<group>"; };
+		65152BCB1CE5836D0098F91B /* LYCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYCommentCell.xib; sourceTree = "<group>"; };
 		651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopVoiceView.h; sourceTree = "<group>"; };
 		651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopVoiceView.m; sourceTree = "<group>"; };
 		651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopVoiceView.xib; sourceTree = "<group>"; };
@@ -326,6 +331,9 @@
 				65A2C8201CD3B2CA00602C9B /* LYRefreshHeader.m */,
 				65A2C8221CD3BF3100602C9B /* LYRefreshAutoFooter.h */,
 				65A2C8231CD3BF3100602C9B /* LYRefreshAutoFooter.m */,
+				65152BC91CE5836D0098F91B /* LYCommentCell.h */,
+				65152BCA1CE5836D0098F91B /* LYCommentCell.m */,
+				65152BCB1CE5836D0098F91B /* LYCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -741,6 +749,7 @@
 			files = (
 				656811571CDC22B70027392D /* LYTopVideoView.xib in Resources */,
 				6542E2971CE1C4E800B83FB9 /* LYCommentViewController.xib in Resources */,
+				65152BCD1CE5836D0098F91B /* LYCommentCell.xib in Resources */,
 				65EBA7B01CD9F4BF001469F7 /* LYTopicPictureView.xib in Resources */,
 				6569E8201CC7DADF0008E385 /* LYWebViewController.xib in Resources */,
 				653471561CD2437F005E81D3 /* LYTopicCell.xib in Resources */,
@@ -858,6 +867,7 @@
 				6569E8091CC7317D0008E385 /* UIImageView+LYExtension.m in Sources */,
 				6569BD991CC5F14B00556F49 /* LYSettingViewController.m in Sources */,
 				656811601CDC71700027392D /* LYBaseViewController.m in Sources */,
+				65152BCC1CE5836D0098F91B /* LYCommentCell.m in Sources */,
 				656811551CDC22A50027392D /* LYTopVideoView.m in Sources */,
 				65ECFCF21CC89A4200AD60B3 /* NSString+LYExtension.m in Sources */,
 				6569E80F1CC7883B0008E385 /* LYMeCell.m in Sources */,

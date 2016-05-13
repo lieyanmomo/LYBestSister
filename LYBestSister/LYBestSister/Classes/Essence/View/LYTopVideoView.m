@@ -26,8 +26,8 @@
     [_imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image]];
     
     self.playCountLabel.text = [NSString stringWithFormat:@"%zd播放", topic.playcount];
-    NSInteger minute = topic.voicetime / 60;
-    NSInteger second = topic.voicetime % 60;
+    NSInteger minute = topic.videotime / 60;
+    NSInteger second = topic.videotime % 60;
     self.timeCountLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minute, second];
 }
 

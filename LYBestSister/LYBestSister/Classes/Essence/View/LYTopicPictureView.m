@@ -64,7 +64,9 @@
     if (topic.isBigPicture) { // 大图
         _imageView.contentMode = UIViewContentModeTop;
         _imageView.clipsToBounds = YES;
+        
     } else {
+        
         _imageView.contentMode = UIViewContentModeScaleToFill;
         _imageView.clipsToBounds = NO;
     }

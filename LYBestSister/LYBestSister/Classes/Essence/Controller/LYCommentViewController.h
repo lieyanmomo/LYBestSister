@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LYTopic;
+
 
 @interface LYCommentViewController : UIViewController
+
+/** 模型数据 */
+@property (nonatomic, strong) LYTopic *topic;
 
 @end
