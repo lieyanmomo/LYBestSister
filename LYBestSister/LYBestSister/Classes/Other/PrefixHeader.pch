@@ -43,6 +43,8 @@
 /** 将网络数据写成plist文件到桌面*/
 #define LYWirteToPlist(objc,fileName) [objc  writeToFile:[NSString stringWithFormat:@"/Users/zhanghaibin/Desktop/%s.plist", #fileName] atomically:YES];
 
+//#define LYWeakSelf __weak typeof(self) weakSelf = self;
+
 /** 打印当前函数名*/
 #define LYLogFuc LYLog(@"%s", __func__);
 
