@@ -7,6 +7,7 @@
 //
 
 #import "LYTabBar.h"
+#import "LYPublishViewController.h"
 
 @interface LYTabBar ()
 
@@ -44,10 +45,22 @@
                                  ] forState:UIControlStateNormal];
         [publishButton setImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
         [publishButton sizeToFit];
+        
+        // 监听按钮点击
+        [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
+        
         [self addSubview:publishButton];
         self.publishButton = publishButton;
     }
     return self;
+}
+
+/** 点击发布按钮调用方法 */
+- (void)publishClick {
+    
+    LYPublishViewController *publish = [[LYPublishViewController alloc] init];
+    
+    [self.window.rootViewController presentViewController:publish animated:NO completion:nil];
 }
 
 /** 布局子控件位置*/

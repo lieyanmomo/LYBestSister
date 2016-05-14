@@ -36,6 +36,10 @@
 #define LYGrayColor(v) LYColor(v, v, v)
 #define LYCommenBackgroundColor LYGrayColor(206)
 
+/** 屏幕宽高 */
+#define LYScreenW [UIScreen mainScreen].bounds.size.width
+#define LYScreenH [UIScreen mainScreen].bounds.size.height
+
 /** 将网络数据写成plist文件到桌面*/
 #define LYWirteToPlist(objc,fileName) [objc  writeToFile:[NSString stringWithFormat:@"/Users/zhanghaibin/Desktop/%s.plist", #fileName] atomically:YES];
 

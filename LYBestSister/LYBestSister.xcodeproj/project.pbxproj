@@ -16,6 +16,9 @@
 		65152BCD1CE5836D0098F91B /* LYCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65152BCB1CE5836D0098F91B /* LYCommentCell.xib */; };
 		651EC10E1CE5BDF30036477B /* LYCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC10D1CE5BDF30036477B /* LYCommentHeaderView.m */; };
 		651EC1111CE603B40036477B /* LYStatusBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1101CE603B40036477B /* LYStatusBarViewController.m */; };
+		651EC11A1CE720750036477B /* LYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1181CE720750036477B /* LYPublishViewController.m */; };
+		651EC11B1CE720750036477B /* LYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651EC1191CE720750036477B /* LYPublishViewController.xib */; };
+		651EC11E1CE727460036477B /* LYPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC11D1CE727460036477B /* LYPublishButton.m */; };
 		651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */; };
 		651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */; };
 		653471511CD240B1005E81D3 /* LYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471501CD240B1005E81D3 /* LYTopic.m */; };
@@ -116,6 +119,11 @@
 		651EC10F1CE603B40036477B /* LYStatusBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusBarViewController.h; sourceTree = "<group>"; };
 		651EC1101CE603B40036477B /* LYStatusBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusBarViewController.m; sourceTree = "<group>"; };
 		651EC1121CE61E540036477B /* LYSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYSingleton.h; sourceTree = "<group>"; };
+		651EC1171CE720750036477B /* LYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPublishViewController.h; sourceTree = "<group>"; };
+		651EC1181CE720750036477B /* LYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPublishViewController.m; sourceTree = "<group>"; };
+		651EC1191CE720750036477B /* LYPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYPublishViewController.xib; sourceTree = "<group>"; };
+		651EC11C1CE727460036477B /* LYPublishButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPublishButton.h; sourceTree = "<group>"; };
+		651EC11D1CE727460036477B /* LYPublishButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPublishButton.m; sourceTree = "<group>"; };
 		651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopVoiceView.h; sourceTree = "<group>"; };
 		651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopVoiceView.m; sourceTree = "<group>"; };
 		651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopVoiceView.xib; sourceTree = "<group>"; };
@@ -269,12 +277,49 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		651EC1131CE71F940036477B /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				651EC1141CE71F940036477B /* Controller */,
+				651EC1151CE71F940036477B /* Model */,
+				651EC1161CE71F940036477B /* View */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		651EC1141CE71F940036477B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				651EC1171CE720750036477B /* LYPublishViewController.h */,
+				651EC1181CE720750036477B /* LYPublishViewController.m */,
+				651EC1191CE720750036477B /* LYPublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		651EC1151CE71F940036477B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		651EC1161CE71F940036477B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				651EC11C1CE727460036477B /* LYPublishButton.h */,
+				651EC11D1CE727460036477B /* LYPublishButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6569BD5D1CC5F14B00556F49 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				6569BD6B1CC5F14B00556F49 /* Main */,
 				6569BD5E1CC5F14B00556F49 /* Essence */,
 				6569BD821CC5F14B00556F49 /* New */,
+				651EC1131CE71F940036477B /* Publish */,
 				6569BD641CC5F14B00556F49 /* FriendTrends */,
 				6569BD751CC5F14B00556F49 /* Me */,
 				6569BD881CC5F14B00556F49 /* Other */,
@@ -766,6 +811,7 @@
 				6569E8201CC7DADF0008E385 /* LYWebViewController.xib in Resources */,
 				653471561CD2437F005E81D3 /* LYTopicCell.xib in Resources */,
 				6569BD921CC5F14B00556F49 /* LYFriendTrendsViewController.storyboard in Resources */,
+				651EC11B1CE720750036477B /* LYPublishViewController.xib in Resources */,
 				651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */,
 				6569E7FB1CC66E030008E385 /* LYRecommandTagCell.xib in Resources */,
 				65EBA7B81CDACF22001469F7 /* LYSeeBigViewController.xib in Resources */,
@@ -866,7 +912,9 @@
 				65102F8D1CE07E0C00826297 /* LYRecommendCatorgayCell.m in Sources */,
 				653471511CD240B1005E81D3 /* LYTopic.m in Sources */,
 				65EBA7AE1CD9F497001469F7 /* LYTopicPictureView.m in Sources */,
+				651EC11E1CE727460036477B /* LYPublishButton.m in Sources */,
 				65ECFD041CCF512600AD60B3 /* LYVoiceViewController.m in Sources */,
+				651EC11A1CE720750036477B /* LYPublishViewController.m in Sources */,
 				651EC1111CE603B40036477B /* LYStatusBarViewController.m in Sources */,
 				65ECFCFE1CCF507300AD60B3 /* LYAllViewController.m in Sources */,
 				65ECFCF51CC92CA700AD60B3 /* LYClearCacheCell.m in Sources */,
