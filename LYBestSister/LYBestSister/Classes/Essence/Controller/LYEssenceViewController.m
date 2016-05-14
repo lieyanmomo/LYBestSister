@@ -169,7 +169,7 @@
     int index = scrollView.contentOffset.x / scrollView.width;
     LYTitleButton *titleButton = self.titleButtons[index];
     // 点击按钮
-    [self titleButtonClick:titleButton];
+    [self dealingTitleButtonClick:titleButton];
     
     // 根据scrollView的偏移量添加
     [self addChildView];
@@ -240,7 +240,16 @@
 #pragma mark -- 监听标题栏按钮点击
 - (void)titleButtonClick:(LYTitleButton *)titleButton {
     
+    if (self.selectedTitleButton == titleButton) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:LYTitleButtonDidRepeatClickNotification object:nil];
+    }
     
+    // 处理点击事件
+    [self dealingTitleButtonClick:titleButton];
+    
+}
+
+- (void)dealingTitleButtonClick:(LYTitleButton *)titleButton {
     // 让选中标题按钮 回复以前的选中状态
     self.selectedTitleButton.selected = NO;
     // 被点击的按钮是选中状态
@@ -258,6 +267,7 @@
     CGPoint offset = self.scrollView.contentOffset;
     offset.x = titleButton.tag * self.scrollView.width;
     [self.scrollView setContentOffset:offset animated:YES];
+
 }
 
 @end

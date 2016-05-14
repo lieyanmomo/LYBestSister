@@ -59,6 +59,35 @@ static NSString * const LYTopicCellId = @"topic";
     // 数据刷新
     [self setUpRefresh];
     
+    // 监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClick) name:LYTabBarButtonDidRepeatClickNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClick) name:LYTitleButtonDidRepeatClickNotification object:nil];
+    
+}
+
+#pragma mark -- 监听方法
+/** 重复点击tabBar上的某个按钮 */
+- (void)tabBarButtonDidRepeatClick {
+    // 控制器的view不在窗口上时直接返回
+    if (self.view.window == nil) return;
+    
+    // 判断是否在窗口上【坐标系转换】
+    CGRect viewRect = [self.view convertRect:self.view.bounds toView:nil];
+    CGRect windowRect = self.view.window.bounds;
+    // 当前view没有显示在window边框范围内
+    if (!CGRectIntersectsRect(viewRect, windowRect)) return;
+    // 在就刷新
+    [self.tableView.mj_header beginRefreshing];
+}
+
+/** 重复点击titleView上的某个按钮 */
+- (void)titleButtonDidRepeatClick {
+    [self tabBarButtonDidRepeatClick];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark -- 设置tableView

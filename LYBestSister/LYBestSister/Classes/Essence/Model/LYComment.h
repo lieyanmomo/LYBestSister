@@ -12,7 +12,7 @@
 @interface LYComment : NSObject
 
 /** id */
-@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *ID;
 
 /** 评论内容*/
 @property (copy, nonatomic) NSString *content;

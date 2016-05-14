@@ -8,21 +8,42 @@
 
 #import "AppDelegate.h"
 #import "LYTabBarController.h"
-#import "LYStatusBarViewController.h"
 
-@interface AppDelegate ()
+
+@interface AppDelegate ()<UITabBarControllerDelegate>
+
+/** 记录XMGTabBarController上一次选中的位置 */
+@property (nonatomic, assign) NSUInteger previousSelectedIndex;
 
 @end
 
 @implementation AppDelegate
 
+#pragma mark - <UITabBarControllerDelegate>
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    // 重复点击了
+    if (self.previousSelectedIndex == tabBarController.selectedIndex) {
+        
+        // 【发送通知】重复点击了tabBar上的某个按钮
+        [[NSNotificationCenter defaultCenter] postNotificationName:LYTabBarButtonDidRepeatClickNotification object:nil];
+        
+    }
+    
+    // 记录当前的选中索引
+    self.previousSelectedIndex = tabBarController.selectedIndex;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 1.创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     // 2.设置窗口根控制器
-    self.window.rootViewController = [[LYTabBarController alloc] init];
+    LYTabBarController *tabBarController = [[LYTabBarController alloc] init];
+    tabBarController.delegate = self;
+    
+    self.window.rootViewController = tabBarController;
+    
     // 3.显示窗口
     [self.window makeKeyAndVisible];
     

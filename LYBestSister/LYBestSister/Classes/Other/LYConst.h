@@ -16,3 +16,9 @@ UIKIT_EXTERN CGFloat  const LYTitlesViewH;
 
 /** TabBar的高度 */
 UIKIT_EXTERN CGFloat  const LYTabBarH;
+
+/** 通知:重复点击了tabBar上的某个按钮 */
+UIKIT_EXTERN NSString * const LYTabBarButtonDidRepeatClickNotification;
+
+/** 通知:重复点击了titleView上的某个按钮 */
+UIKIT_EXTERN NSString * const LYTitleButtonDidRepeatClickNotification;

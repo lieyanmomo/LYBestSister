@@ -161,7 +161,7 @@ static NSString * const LYHeaderId = @"header";
     params[@"a"] = @"dataList";
     params[@"hot"] = @"1";
     params[@"c"] = @"comment";
-    params[@"data_id"] = self.topic.id;
+    params[@"data_id"] = self.topic.ID;
     
     // 发送请求
     __weak typeof(self) weakSelf = self;
@@ -205,8 +205,8 @@ static NSString * const LYHeaderId = @"header";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"dataList";
     params[@"c"] = @"comment";
-    params[@"data_id"] = self.topic.id;
-    params[@"lastcid"] = self.lastestComments.lastObject.id;
+    params[@"data_id"] = self.topic.ID;
+    params[@"lastcid"] = self.lastestComments.lastObject.ID;
     
     // 发送请求
     __weak typeof(self) weakSelf = self;

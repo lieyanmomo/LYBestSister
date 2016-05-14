@@ -14,6 +14,14 @@
 @implementation LYExtensionConfig
 
 + (void)load {
+    
+    [NSObject mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{
+                 @"ID" : @"id"
+                 
+                 };
+    }];
+    
     /** 声明模型属性名 对应的字典key*/
     [LYTopic mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
         return @{
