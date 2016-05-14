@@ -263,6 +263,9 @@ static NSString * const LYRecommendUserId = @"userCell";
         
         LYRecommendCategory *recommendCategory = self.recommendCategories[indexPath.row];
         if (recommendCategory.users.count == 0) {
+            // 取消之前的请求
+            [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+            
             // 刷新右面表格
             [self.userTable.mj_header beginRefreshing];
         }

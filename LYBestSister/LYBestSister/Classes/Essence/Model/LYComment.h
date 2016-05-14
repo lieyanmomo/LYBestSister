@@ -19,9 +19,12 @@
 /** 评论用户*/
 @property (strong, nonatomic) LYUser *user;
 
-
-
 /** 被点赞数 */
 @property (nonatomic, assign) NSInteger like_count;
+
+/** 音频长度 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 音频路径 */
+@property (nonatomic, copy) NSString *voiceuri;
 
 @end
