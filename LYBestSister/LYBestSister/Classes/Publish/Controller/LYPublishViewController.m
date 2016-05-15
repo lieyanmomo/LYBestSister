@@ -9,6 +9,8 @@
 #import "LYPublishViewController.h"
 #import "LYPublishButton.h"
 #import <POP.h>
+#import "LYNavigationController.h"
+#import "LYPostWordViewController.h"
 
 @interface LYPublishViewController ()
 
@@ -151,14 +153,8 @@ static CGFloat const LYSpringFactor = 10;
 }
 
 
-#pragma mark - 点击按钮调用方法
-- (void)buttonClick:(LYPublishButton *)button {
-    LYLogFuc
-}
-
-#pragma mark - 点击取消按钮调用方法
-- (IBAction)cancel {
-    
+#pragma mark - 退出动画
+- (void)quit:(void(^)())task {
     // 禁止交互
     self.view.userInteractionEnabled = NO;
     
@@ -176,22 +172,59 @@ static CGFloat const LYSpringFactor = 10;
     
     
     __weak typeof(self) weakSelf = self;
-
+    
     // 让标题执行动画
     POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     anim.toValue = @(self.sloganView.layer.position.y + LYScreenH);
     // CACurrentMediaTime()获得的是当前时间
     anim.beginTime = CACurrentMediaTime() + [self.times.lastObject doubleValue];
     [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+        
         [weakSelf dismissViewControllerAnimated:NO completion:nil];
+        
+        if (task) task();
+    
     }];
     [self.sloganView.layer pop_addAnimation:anim forKey:nil];
+}
+
+#pragma mark - 点击按钮调用方法
+- (void)buttonClick:(LYPublishButton *)button {
+   
+    [self quit:^{
+        // 按钮索引
+        NSInteger index = [self.buttons indexOfObject:button];
+        
+        switch (index) {
+            case 2: { // 发布按钮
+                // 弹出发段子控制器
+                LYPostWordViewController *postWordVc = [[LYPostWordViewController alloc] init];
+                [self.view.window.rootViewController presentViewController:[[LYNavigationController alloc] initWithRootViewController:postWordVc] animated:YES completion:nil];
+                
+                break;
+                
+            }
+                
+            default:
+                LYLog(@"其他");
+                break;
+        }
+        
+    }];
+    
+}
+
+#pragma mark - 点击【取消】按钮调用方法
+- (IBAction)cancel {
+    
+    [self quit:nil];
     
 }
 
 #pragma mark - 点击控制器View调用方法
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self cancel];
+    
+    [self quit:nil];
 }
 
 @end

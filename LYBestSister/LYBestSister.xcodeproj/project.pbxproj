@@ -19,6 +19,8 @@
 		651EC11A1CE720750036477B /* LYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1181CE720750036477B /* LYPublishViewController.m */; };
 		651EC11B1CE720750036477B /* LYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651EC1191CE720750036477B /* LYPublishViewController.xib */; };
 		651EC11E1CE727460036477B /* LYPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC11D1CE727460036477B /* LYPublishButton.m */; };
+		651EC1211CE768BF0036477B /* LYPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1201CE768BF0036477B /* LYPostWordViewController.m */; };
+		651EC1241CE7FCFB0036477B /* LYPLaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1231CE7FCFB0036477B /* LYPLaceholderTextView.m */; };
 		651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */; };
 		651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */; };
 		653471511CD240B1005E81D3 /* LYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471501CD240B1005E81D3 /* LYTopic.m */; };
@@ -124,6 +126,10 @@
 		651EC1191CE720750036477B /* LYPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYPublishViewController.xib; sourceTree = "<group>"; };
 		651EC11C1CE727460036477B /* LYPublishButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPublishButton.h; sourceTree = "<group>"; };
 		651EC11D1CE727460036477B /* LYPublishButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPublishButton.m; sourceTree = "<group>"; };
+		651EC11F1CE768BF0036477B /* LYPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPostWordViewController.h; sourceTree = "<group>"; };
+		651EC1201CE768BF0036477B /* LYPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPostWordViewController.m; sourceTree = "<group>"; };
+		651EC1221CE7FCFB0036477B /* LYPLaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPLaceholderTextView.h; sourceTree = "<group>"; };
+		651EC1231CE7FCFB0036477B /* LYPLaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPLaceholderTextView.m; sourceTree = "<group>"; };
 		651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopVoiceView.h; sourceTree = "<group>"; };
 		651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopVoiceView.m; sourceTree = "<group>"; };
 		651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopVoiceView.xib; sourceTree = "<group>"; };
@@ -293,6 +299,8 @@
 				651EC1171CE720750036477B /* LYPublishViewController.h */,
 				651EC1181CE720750036477B /* LYPublishViewController.m */,
 				651EC1191CE720750036477B /* LYPublishViewController.xib */,
+				651EC11F1CE768BF0036477B /* LYPostWordViewController.h */,
+				651EC1201CE768BF0036477B /* LYPostWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +317,8 @@
 			children = (
 				651EC11C1CE727460036477B /* LYPublishButton.h */,
 				651EC11D1CE727460036477B /* LYPublishButton.m */,
+				651EC1221CE7FCFB0036477B /* LYPLaceholderTextView.h */,
+				651EC1231CE7FCFB0036477B /* LYPLaceholderTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -939,10 +949,12 @@
 				6569BD901CC5F14B00556F49 /* LYEssenceViewController.m in Sources */,
 				65EBA7B71CDACF22001469F7 /* LYSeeBigViewController.m in Sources */,
 				6569BD911CC5F14B00556F49 /* LYFriendTrendsViewController.m in Sources */,
+				651EC1241CE7FCFB0036477B /* LYPLaceholderTextView.m in Sources */,
 				6569BDE81CC61C0000556F49 /* LYLoginRegisterViewController.m in Sources */,
 				65A2C8211CD3B2CA00602C9B /* LYRefreshHeader.m in Sources */,
 				65ECFCF81CC92CD200AD60B3 /* LYSettingCell.m in Sources */,
 				6569E81B1CC7AEFB0008E385 /* LYMeSquareButton.m in Sources */,
+				651EC1211CE768BF0036477B /* LYPostWordViewController.m in Sources */,
 				6569E8181CC7A5B40008E385 /* LYMeSquare.m in Sources */,
 				65ECFCFB1CCF254800AD60B3 /* LYTitleButton.m in Sources */,
 				65A2CE311CD7B99300ABF16D /* LYUser.m in Sources */,
