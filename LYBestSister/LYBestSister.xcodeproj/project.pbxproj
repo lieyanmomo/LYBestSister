@@ -21,6 +21,8 @@
 		651EC11E1CE727460036477B /* LYPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC11D1CE727460036477B /* LYPublishButton.m */; };
 		651EC1211CE768BF0036477B /* LYPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1201CE768BF0036477B /* LYPostWordViewController.m */; };
 		651EC1241CE7FCFB0036477B /* LYPLaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1231CE7FCFB0036477B /* LYPLaceholderTextView.m */; };
+		651EC1271CE8915F0036477B /* LYPostWordToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1261CE8915F0036477B /* LYPostWordToolbar.m */; };
+		651EC1291CE891940036477B /* LYPostWordToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651EC1281CE891940036477B /* LYPostWordToolbar.xib */; };
 		651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */; };
 		651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */; };
 		653471511CD240B1005E81D3 /* LYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471501CD240B1005E81D3 /* LYTopic.m */; };
@@ -130,6 +132,9 @@
 		651EC1201CE768BF0036477B /* LYPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPostWordViewController.m; sourceTree = "<group>"; };
 		651EC1221CE7FCFB0036477B /* LYPLaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPLaceholderTextView.h; sourceTree = "<group>"; };
 		651EC1231CE7FCFB0036477B /* LYPLaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPLaceholderTextView.m; sourceTree = "<group>"; };
+		651EC1251CE8915F0036477B /* LYPostWordToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPostWordToolbar.h; sourceTree = "<group>"; };
+		651EC1261CE8915F0036477B /* LYPostWordToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPostWordToolbar.m; sourceTree = "<group>"; };
+		651EC1281CE891940036477B /* LYPostWordToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYPostWordToolbar.xib; sourceTree = "<group>"; };
 		651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopVoiceView.h; sourceTree = "<group>"; };
 		651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopVoiceView.m; sourceTree = "<group>"; };
 		651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopVoiceView.xib; sourceTree = "<group>"; };
@@ -319,6 +324,9 @@
 				651EC11D1CE727460036477B /* LYPublishButton.m */,
 				651EC1221CE7FCFB0036477B /* LYPLaceholderTextView.h */,
 				651EC1231CE7FCFB0036477B /* LYPLaceholderTextView.m */,
+				651EC1251CE8915F0036477B /* LYPostWordToolbar.h */,
+				651EC1261CE8915F0036477B /* LYPostWordToolbar.m */,
+				651EC1281CE891940036477B /* LYPostWordToolbar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -822,6 +830,7 @@
 				653471561CD2437F005E81D3 /* LYTopicCell.xib in Resources */,
 				6569BD921CC5F14B00556F49 /* LYFriendTrendsViewController.storyboard in Resources */,
 				651EC11B1CE720750036477B /* LYPublishViewController.xib in Resources */,
+				651EC1291CE891940036477B /* LYPostWordToolbar.xib in Resources */,
 				651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */,
 				6569E7FB1CC66E030008E385 /* LYRecommandTagCell.xib in Resources */,
 				65EBA7B81CDACF22001469F7 /* LYSeeBigViewController.xib in Resources */,
@@ -900,6 +909,7 @@
 			files = (
 				65A2C8241CD3BF3100602C9B /* LYRefreshAutoFooter.m in Sources */,
 				6569E8031CC7289A0008E385 /* LYConst.m in Sources */,
+				651EC1271CE8915F0036477B /* LYPostWordToolbar.m in Sources */,
 				6569BD9E1CC5F14B00556F49 /* main.m in Sources */,
 				6569BD9C1CC5F14B00556F49 /* AppDelegate.m in Sources */,
 				651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */,
