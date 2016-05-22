@@ -17,6 +17,9 @@ CGFloat  const LYTitlesViewH = 40;
 /** TabBar的高度 */
 CGFloat  const LYTabBarH = 49;
 
+/** 标签的高度 */
+CGFloat  const LYTagH = 25;
+
 /** 通知:重复点击了tabBar上的某个按钮 */
 NSString * const LYTabBarButtonDidRepeatClickNotification = @"LYTabBarButtonDidRepeatClickNotification";
 

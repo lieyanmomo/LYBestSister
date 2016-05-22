@@ -23,6 +23,8 @@
 		651EC1241CE7FCFB0036477B /* LYPLaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1231CE7FCFB0036477B /* LYPLaceholderTextView.m */; };
 		651EC1271CE8915F0036477B /* LYPostWordToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC1261CE8915F0036477B /* LYPostWordToolbar.m */; };
 		651EC1291CE891940036477B /* LYPostWordToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651EC1281CE891940036477B /* LYPostWordToolbar.xib */; };
+		651EC12C1CE9B5330036477B /* LYAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC12B1CE9B5330036477B /* LYAddTagViewController.m */; };
+		651EC12F1CE9BED60036477B /* UITextField+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 651EC12E1CE9BED60036477B /* UITextField+LYExtension.m */; };
 		651F8E641CDB8D84007854A4 /* LYTopVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */; };
 		651F8E661CDB8DA4007854A4 /* LYTopVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */; };
 		653471511CD240B1005E81D3 /* LYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 653471501CD240B1005E81D3 /* LYTopic.m */; };
@@ -82,6 +84,8 @@
 		65ECFD041CCF512600AD60B3 /* LYVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFD031CCF512600AD60B3 /* LYVoiceViewController.m */; };
 		65ECFD071CCF514800AD60B3 /* LYPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFD061CCF514800AD60B3 /* LYPictureViewController.m */; };
 		65ECFD0A1CCF515B00AD60B3 /* LYWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65ECFD091CCF515B00AD60B3 /* LYWordViewController.m */; };
+		65F880FD1CECA85A00411C61 /* LYTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F880FC1CECA85A00411C61 /* LYTagButton.m */; };
+		65F881001CF1338500411C61 /* LYTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F880FF1CF1338500411C61 /* LYTagTextField.m */; };
 		65FC61351CB917060007D32D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FC61341CB917060007D32D /* Assets.xcassets */; };
 		65FC614E1CB917060007D32D /* LYBestSisterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FC614D1CB917060007D32D /* LYBestSisterUITests.m */; };
 /* End PBXBuildFile section */
@@ -135,6 +139,10 @@
 		651EC1251CE8915F0036477B /* LYPostWordToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPostWordToolbar.h; sourceTree = "<group>"; };
 		651EC1261CE8915F0036477B /* LYPostWordToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPostWordToolbar.m; sourceTree = "<group>"; };
 		651EC1281CE891940036477B /* LYPostWordToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYPostWordToolbar.xib; sourceTree = "<group>"; };
+		651EC12A1CE9B5330036477B /* LYAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAddTagViewController.h; sourceTree = "<group>"; };
+		651EC12B1CE9B5330036477B /* LYAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAddTagViewController.m; sourceTree = "<group>"; };
+		651EC12D1CE9BED60036477B /* UITextField+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+LYExtension.h"; sourceTree = "<group>"; };
+		651EC12E1CE9BED60036477B /* UITextField+LYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LYExtension.m"; sourceTree = "<group>"; };
 		651F8E621CDB8D84007854A4 /* LYTopVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTopVoiceView.h; sourceTree = "<group>"; };
 		651F8E631CDB8D84007854A4 /* LYTopVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTopVoiceView.m; sourceTree = "<group>"; };
 		651F8E651CDB8DA4007854A4 /* LYTopVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYTopVoiceView.xib; sourceTree = "<group>"; };
@@ -244,6 +252,10 @@
 		65ECFD061CCF514800AD60B3 /* LYPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPictureViewController.m; sourceTree = "<group>"; };
 		65ECFD081CCF515B00AD60B3 /* LYWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWordViewController.h; sourceTree = "<group>"; };
 		65ECFD091CCF515B00AD60B3 /* LYWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWordViewController.m; sourceTree = "<group>"; };
+		65F880FB1CECA85A00411C61 /* LYTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTagButton.h; sourceTree = "<group>"; };
+		65F880FC1CECA85A00411C61 /* LYTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTagButton.m; sourceTree = "<group>"; };
+		65F880FE1CF1338500411C61 /* LYTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTagTextField.h; sourceTree = "<group>"; };
+		65F880FF1CF1338500411C61 /* LYTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTagTextField.m; sourceTree = "<group>"; };
 		65FC61251CB917060007D32D /* LYBestSister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYBestSister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FC61341CB917060007D32D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FC61391CB917060007D32D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -306,6 +318,8 @@
 				651EC1191CE720750036477B /* LYPublishViewController.xib */,
 				651EC11F1CE768BF0036477B /* LYPostWordViewController.h */,
 				651EC1201CE768BF0036477B /* LYPostWordViewController.m */,
+				651EC12A1CE9B5330036477B /* LYAddTagViewController.h */,
+				651EC12B1CE9B5330036477B /* LYAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -327,6 +341,10 @@
 				651EC1251CE8915F0036477B /* LYPostWordToolbar.h */,
 				651EC1261CE8915F0036477B /* LYPostWordToolbar.m */,
 				651EC1281CE891940036477B /* LYPostWordToolbar.xib */,
+				65F880FB1CECA85A00411C61 /* LYTagButton.h */,
+				65F880FC1CECA85A00411C61 /* LYTagButton.m */,
+				65F880FE1CF1338500411C61 /* LYTagTextField.h */,
+				65F880FF1CF1338500411C61 /* LYTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -612,6 +630,8 @@
 				65ECFCF11CC89A4200AD60B3 /* NSString+LYExtension.m */,
 				653471571CD26401005E81D3 /* NSDate+LYExtension.h */,
 				653471581CD26401005E81D3 /* NSDate+LYExtension.m */,
+				651EC12D1CE9BED60036477B /* UITextField+LYExtension.h */,
+				651EC12E1CE9BED60036477B /* UITextField+LYExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -909,6 +929,7 @@
 			files = (
 				65A2C8241CD3BF3100602C9B /* LYRefreshAutoFooter.m in Sources */,
 				6569E8031CC7289A0008E385 /* LYConst.m in Sources */,
+				65F880FD1CECA85A00411C61 /* LYTagButton.m in Sources */,
 				651EC1271CE8915F0036477B /* LYPostWordToolbar.m in Sources */,
 				6569BD9E1CC5F14B00556F49 /* main.m in Sources */,
 				6569BD9C1CC5F14B00556F49 /* AppDelegate.m in Sources */,
@@ -947,7 +968,9 @@
 				6569BD951CC5F14B00556F49 /* LYTabBar.m in Sources */,
 				6569E8091CC7317D0008E385 /* UIImageView+LYExtension.m in Sources */,
 				6569BD991CC5F14B00556F49 /* LYSettingViewController.m in Sources */,
+				651EC12F1CE9BED60036477B /* UITextField+LYExtension.m in Sources */,
 				656811601CDC71700027392D /* LYBaseViewController.m in Sources */,
+				651EC12C1CE9B5330036477B /* LYAddTagViewController.m in Sources */,
 				65152BCC1CE5836D0098F91B /* LYCommentCell.m in Sources */,
 				656811551CDC22A50027392D /* LYTopVideoView.m in Sources */,
 				65ECFCF21CC89A4200AD60B3 /* NSString+LYExtension.m in Sources */,
@@ -959,6 +982,7 @@
 				6569BD901CC5F14B00556F49 /* LYEssenceViewController.m in Sources */,
 				65EBA7B71CDACF22001469F7 /* LYSeeBigViewController.m in Sources */,
 				6569BD911CC5F14B00556F49 /* LYFriendTrendsViewController.m in Sources */,
+				65F881001CF1338500411C61 /* LYTagTextField.m in Sources */,
 				651EC1241CE7FCFB0036477B /* LYPLaceholderTextView.m in Sources */,
 				6569BDE81CC61C0000556F49 /* LYLoginRegisterViewController.m in Sources */,
 				65A2C8211CD3B2CA00602C9B /* LYRefreshHeader.m in Sources */,

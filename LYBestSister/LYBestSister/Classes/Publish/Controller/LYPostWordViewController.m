@@ -36,6 +36,13 @@
     [self setupToolbar];
 }
 
+#pragma mark - view将要显示的时候调用
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.placeholderTextView becomeFirstResponder];
+}
+
 #pragma mark - 设置【Toolbar】
 - (void)setupToolbar {
     LYPostWordToolbar *toolbar = [LYPostWordToolbar toolbarFromXib];
