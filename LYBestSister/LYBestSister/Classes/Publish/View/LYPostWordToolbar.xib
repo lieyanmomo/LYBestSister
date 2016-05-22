@@ -50,8 +50,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wK0-Bl-4Dw">
-                    <rect key="frame" x="0.0" y="0.0" width="365" height="60"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="5" y="0.0" width="355" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="kFm-W4-OPC"/>
                     </constraints>
@@ -59,9 +58,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="wK0-Bl-4Dw" secondAttribute="trailing" id="BdP-eV-8AH"/>
+                <constraint firstAttribute="trailing" secondItem="wK0-Bl-4Dw" secondAttribute="trailing" constant="5" id="BdP-eV-8AH"/>
                 <constraint firstAttribute="trailing" secondItem="HFy-32-TmB" secondAttribute="trailing" id="BpU-58-CZa"/>
-                <constraint firstItem="wK0-Bl-4Dw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="R7c-Wu-h3R"/>
+                <constraint firstItem="wK0-Bl-4Dw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="R7c-Wu-h3R"/>
                 <constraint firstItem="wK0-Bl-4Dw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jrJ-zc-QzO"/>
                 <constraint firstItem="HFy-32-TmB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rvR-vn-GR9"/>
                 <constraint firstAttribute="bottom" secondItem="HFy-32-TmB" secondAttribute="bottom" id="w67-NR-qPa"/>
@@ -69,9 +68,11 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottomView" destination="HFy-32-TmB" id="3yz-1a-ZBE"/>
                 <outlet property="topView" destination="wK0-Bl-4Dw" id="3em-eL-ELc"/>
+                <outlet property="topViewHeight" destination="kFm-W4-OPC" id="doy-yL-1IK"/>
             </connections>
-            <point key="canvasLocation" x="121.5" y="323"/>
+            <point key="canvasLocation" x="275.5" y="262"/>
         </view>
     </objects>
     <resources>

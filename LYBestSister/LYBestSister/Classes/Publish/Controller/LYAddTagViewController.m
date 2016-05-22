@@ -81,12 +81,10 @@
 #pragma mark -- 设置初始化【标签】
 - (void)setupTag {
     
-    self.textField.text = @"逗逼";
-    [self tipClick];
-    
-    self.textField.text = @"小二";
-    [self tipClick];
-    
+    for (NSString *tag in self.tags) {
+        self.textField.text = tag;
+        [self tipClick];
+    }
 }
 
 #pragma mark -- 设置容纳所有按钮和文本框的contentView
@@ -131,7 +129,7 @@
     
     textField.deleteBackwardOperation = ^{
         // 判断文本框是否有文字
-        if (weakSelf.textField.hasText) return;
+        if (weakSelf.textField.hasText || weakSelf.tagButtons.count == 0) return;
         
         // 点击删除最后一个按钮
         [weakSelf tagClick:weakSelf.tagButtons.lastObject];
@@ -147,7 +145,7 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(done)];
     // 开始不可以点击
-    self.navigationItem.rightBarButtonItem.enabled = NO;
+//    self.navigationItem.rightBarButtonItem.enabled = NO;
     
     // 强制更新【马上更新现在状态】
     [self.navigationController.navigationBar layoutIfNeeded];
@@ -183,14 +181,19 @@
     textW = MAX(100, textW);
     
     LYTagButton *lastTagButton = self.tagButtons.lastObject;
-    CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + LYMargin;
-    CGFloat rightWidth = self.contentView.width - leftWidth;
-    if (rightWidth >= textW) { // 跟新添加的标签按钮处在同一行
-        self.textField.x = leftWidth;
-        self.textField.y = lastTagButton.y;
-    } else { // 换行
+    if (lastTagButton == nil) {
         self.textField.x = 0;
-        self.textField.y = CGRectGetMaxY(lastTagButton.frame) + LYMargin;
+        self.textField.y = 0;
+    } else {
+        CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + LYMargin;
+        CGFloat rightWidth = self.contentView.width - leftWidth;
+        if (rightWidth >= textW) { // 跟新添加的标签按钮处在同一行
+            self.textField.x = leftWidth;
+            self.textField.y = lastTagButton.y;
+        } else { // 换行
+            self.textField.x = 0;
+            self.textField.y = CGRectGetMaxY(lastTagButton.frame) + LYMargin;
+        }
     }
     
     // 排布提醒按钮
@@ -299,7 +302,12 @@
 
 #pragma mark -- 点击【完成】按钮调用方法
 - (void)done {
-    LYLogFuc
+    // 1.将self.tagButtons中存放的所有对象的currentTitle属性值取出来，放到一个新的数组中，并返回
+    NSArray *tags = [self.tagButtons valueForKeyPath:@"currentTitle"];
+    !self.getTagsBlock ? : self.getTagsBlock(tags);
+    
+    // 2.关闭当前控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
